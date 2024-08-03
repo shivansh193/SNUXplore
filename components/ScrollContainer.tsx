@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import NavigationCard from "@/components/NavigationCard";
 import { Places } from "@/models/interfaces";
+import Map from "@/components/Map/Map";
 
 interface ScrollContainerProps {
     places: Places[];
@@ -49,6 +50,10 @@ const ScrollContainer: React.FC<ScrollContainerProps> = ({ places }) => {
                         <NavigationCard key={place.name} place={place} />
                     ))}
                 </div>
+            </div>
+
+            <div className={'h-full w-2/3'}>
+                <Map places={places} />
             </div>
         </div>
     );
