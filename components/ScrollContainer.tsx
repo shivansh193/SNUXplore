@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import NavigationCard from "@/components/NavigationCard";
 import { Places } from "@/models/interfaces";
-import Map from "@/components/Map/Map";
+import Map from "@/components/Map";
 
 interface ScrollContainerProps {
     places: Places[];
