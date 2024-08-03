@@ -18,7 +18,42 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        // Montserrat Fonts
+        "montserrat-black": ['var(--font-montserrat-black)'],
+        "montserrat-black-italic": ['var(--font-montserrat-black-italic)'],
+        "montserrat-bold": ['var(--font-montserrat-bold)'],
+        "montserrat-bold-italic": ['var(--font-montserrat-bold-italic)'],
+        "montserrat-extrabold": ['var(--font-montserrat-extrabold)'],
+        "montserrat-extrabold-italic": ['var(--font-montserrat-extrabold-italic)'],
+        "montserrat-extralight": ['var(--font-montserrat-extralight)'],
+        "montserrat-extralight-italic": ['var(--font-montserrat-extralight-italic)'],
+        "montserrat-italic": ['var(--font-montserrat-italic)'],
+        "montserrat-light": ['var(--font-montserrat-light)'],
+        "montserrat-light-italic": ['var(--font-montserrat-light-italic)'],
+        "montserrat-medium": ['var(--font-montserrat-medium)'],
+        "montserrat-medium-italic": ['var(--font-montserrat-medium-italic)'],
+        "montserrat-regular": ['var(--font-montserrat-regular)'],
+        "montserrat-semibold": ['var(--font-montserrat-semibold)'],
+        "montserrat-semibold-italic": ['var(--font-montserrat-semibold-italic)'],
+        "montserrat-thin": ['var(--font-montserrat-thin)'],
+        "montserrat-thin-italic": ['var(--font-montserrat-thin-italic)'],
+        // Nohemi Fonts
+        "nohemi-black": ['var(--font-nohemi-black)'],
+        "nohemi-bold": ['var(--font-nohemi-bold)'],
+        "nohemi-extrabold": ['var(--font-nohemi-extrabold)'],
+        "nohemi-extralight": ['var(--font-nohemi-extralight)'],
+        "nohemi-light": ['var(--font-nohemi-light)'],
+        "nohemi-medium": ['var(--font-nohemi-medium)'],
+        "nohemi-regular": ['var(--font-nohemi-regular)'],
+        "nohemi-semibold": ['var(--font-nohemi-semibold)'],
+        "nohemi-thin": ['var(--font-nohemi-thin)']
+      },
       colors: {
+        'snuxplore-brown':'#231F20',
+        'snuxplore-yellow':'#F0BD1A',
+        'snuxplore-black':'#1E1E1E',
+        'snuxplore-gray':'#686868',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -52,10 +87,6 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        'snuxplore-brown':'#231F20',
-        'snuxplore-yellow':'#F0BD1A',
-        'snuxplore-black':'#1E1E1E',
-        'snuxplore-gray':'#686868'
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -76,9 +107,6 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      fontFamily: {
-        nohemi: ["var(--font-family-nohemi)"]
-      }
     },
   },
   plugins: [require("tailwindcss-animate")],
