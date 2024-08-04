@@ -4,7 +4,7 @@ import Navigation from "../components/LandingPage/NavigationBig"
 
 export default function Home() {
   return (
-    <div>
+    <div className={`overflow-x-hidden`}>
       <HeroSec />
       <QuickLinksPage />
       <Navigation />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "SNUXplore",
@@ -164,6 +165,7 @@ export default function RootLayout({
     >
       <body className={`${montserratRegular.className}`}>
         {children}
+        <Footer />
       </body>
     </html>
   );
