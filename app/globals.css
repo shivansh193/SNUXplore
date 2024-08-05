@@ -79,3 +79,16 @@
     scrollbar-width: none;  /* Firefox */
   }
 }
+
+.fade-t {
+  mask-image: linear-gradient(
+    180deg,
+    transparent,
+    #fff 150%
+  );
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    transparent,
+    #fff 150%
+  );
+}
