@@ -32,8 +32,8 @@ const WelcomeSection = () => {
           </div>
         </div>
         <p className="text-base sm:text-lg mb-8 max-w-2xl mx-auto">
-          We get it, life is hard. Navigating through the 286 acre campus shouldn't be. 
-          Unlock everything SNU has to offer. All just a search away!
+            {"We get it, life is hard. Navigating through the 286 acre campus shouldn't be."}
+            {"Unlock everything SNU has to offer. All just a search away!"}
         </p>
         <nav className="flex justify-around bg-gray-800 p-4 rounded-full border border-gray-600 items-center">
           <button className="bg-gray-900 text-white px-4 py-2 rounded-full border border-gray-600 hover:bg-gray-700 hover:border-gray-500 transition-colors">Home</button>
@@ -67,9 +67,9 @@ const AvatarButton = () => {
       </a>
     )
   }
-  
-  
- 
-  
+
+
+
+
 
 export default WelcomeSection;
