@@ -1,6 +1,6 @@
 export default function Font() {
     return (
-        <div>
+        <div className={`bg-black text-white`}>
             <p className="font-montserrat-black">Montserrat Black</p>
             <p className="font-montserrat-black-italic">Montserrat Black Italic</p>
             <p className="font-montserrat-bold">Montserrat Bold</p>
