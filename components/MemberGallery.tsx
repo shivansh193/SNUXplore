@@ -19,27 +19,27 @@ export default function MemberGallery() {
         <div className={`flex flex-col items-center justify-center md:pb-20 pb-6`}>
             <div className={`md:w-[55%] w-[90%] grid md:grid-cols-5 grid-cols-2 place-items-center gap-y-3 md:mb-10 mb-4`}>
                 <button onClick={() => setCurrentTab(0)}>
-                    <p className={`text-lg font-montserrat-extrabold rounded-full w-[150px] py-1 border-2 border-snuxplore-yellow  transition-all duration-200 bg-snuxplore-footer-${currentTab === 0 ? 'g1 text-white' : 'g2 text-black hover:opacity-50'}`}>
+                    <p className={`text-lg font-montserrat-extrabold rounded-full w-[150px] py-1 border-2 border-snuxplore-yellow  transition-all duration-200 ${currentTab === 0 ? 'bg-snuxplore-footer-g1 text-white' : 'bg-snuxplore-footer-g2 text-black hover:opacity-50'}`}>
                         Project Leads
                     </p>
                 </button>
                 <button onClick={() => setCurrentTab(1)}>
-                    <p className={`text-lg font-montserrat-extrabold rounded-full w-[150px] py-1 border-2 border-snuxplore-yellow  transition-all duration-200 bg-snuxplore-footer-${currentTab === 1 ? 'g1 text-white' : 'g2 text-black hover:opacity-50'}`}>
+                    <p className={`text-lg font-montserrat-extrabold rounded-full w-[150px] py-1 border-2 border-snuxplore-yellow  transition-all duration-200 ${currentTab === 1 ? 'bg-snuxplore-footer-g1 text-white' : 'bg-snuxplore-footer-g2 text-black hover:opacity-50'}`}>
                         Development
                     </p>
                 </button>
                 <button onClick={() => setCurrentTab(2)}>
-                    <p className={`text-lg font-montserrat-extrabold rounded-full w-[150px] py-1 border-2 border-snuxplore-yellow  transition-all duration-200 bg-snuxplore-footer-${currentTab === 2 ? 'g1 text-white' : 'g2 text-black hover:opacity-50'}`}>
+                    <p className={`text-lg font-montserrat-extrabold rounded-full w-[150px] py-1 border-2 border-snuxplore-yellow  transition-all duration-200 ${currentTab === 2 ? 'bg-snuxplore-footer-g1 text-white' : 'bg-snuxplore-footer-g2 text-black hover:opacity-50'}`}>
                         Marketing
                     </p>
                 </button>
                 <button onClick={() => setCurrentTab(3)}>
-                    <p className={`text-lg font-montserrat-extrabold rounded-full w-[150px] py-1 border-2 border-snuxplore-yellow  transition-all duration-200 bg-snuxplore-footer-${currentTab === 3 ? 'g1 text-white' : 'g2 text-black hover:opacity-50'}`}>
+                    <p className={`text-lg font-montserrat-extrabold rounded-full w-[150px] py-1 border-2 border-snuxplore-yellow  transition-all duration-200 ${currentTab === 3 ? 'bg-snuxplore-footer-g1 text-white' : 'bg-snuxplore-footer-g2 text-black hover:opacity-50'}`}>
                         Data Curation
                     </p>
                 </button>
                 <button onClick={() => setCurrentTab(4)}>
-                    <p className={`text-lg font-montserrat-extrabold rounded-full w-[150px] py-1 border-2 border-snuxplore-yellow  transition-all duration-200 bg-snuxplore-footer-${currentTab === 4 ? 'g1 text-white' : 'g2 text-black hover:opacity-50'}`}>
+                    <p className={`text-lg font-montserrat-extrabold rounded-full w-[150px] py-1 border-2 border-snuxplore-yellow  transition-all duration-200 ${currentTab === 4 ? 'bg-snuxplore-footer-g1 text-white' : 'bg-snuxplore-footer-g2 text-black hover:opacity-50'}`}>
                         Hall of Fame
                     </p>
                 </button>
