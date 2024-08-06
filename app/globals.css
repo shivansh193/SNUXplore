@@ -29,6 +29,17 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+
+    --scroll-width: 5px;
+    --scroll-height: 5px;
+
+    --scroll-track-rgb: #221E1F;
+    --scroll-track-border-radius: 0px;
+
+    --scroll-thumb-rgb: #F0BD1A;
+    --scroll-thumb-border-radius: 2px;
+
+    --scroll-thumb-hover-rgb: #E37537;
   }
 
   .dark {
@@ -98,4 +109,50 @@
 .leaflet-control-zoom-out,
 .leaflet-control-attribution {
   filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+/* Scrollbar */
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: var(--scroll-width); /* Width of the scrollbar */
+  height: var(--scroll-height); /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-track-rgb); /* Background of the scrollbar track */
+  border-radius: var(--scroll-track-border-radius); /* Rounded corners of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-rgb); /* Color of the scrollbar thumb */
+  border-radius: var(--scroll-thumb-border-radius); /* Rounded corners of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover-rgb); /* Color of the scrollbar thumb when hovered */
+}
+
+/* Firefox */
+body {
+  scrollbar-width: thin; /* Sets the scrollbar width to thin */
+  scrollbar-color: var(--scroll-thumb-rgb) var(--scroll-track-rgb); /* Sets the thumb and track color */
+}
+
+body::-webkit-scrollbar {
+  width: var(--scroll-width); /* Width of the scrollbar */
+  height: var(--scroll-height); /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scroll-track-rgb); /* Background of the scrollbar track */
+  border-radius: var(--scroll-track-border-radius); /* Rounded corners of the track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-rgb); /* Color of the scrollbar thumb */
+  border-radius: var(--scroll-thumb-border-radius); /* Rounded corners of the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover-rgb); /* Color of the scrollbar thumb when hovered */
 }
