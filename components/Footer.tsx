@@ -38,12 +38,12 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className={`md:flex md:flex-col md:items-center md:gap-40 hidden h-[100%] w-fit z-10`}>
-                    <Image className={`mt-`} src={sSvg} alt={`SNUXplore`}/>
+                <div className={`md:flex md:flex-col md:items-center md:gap-40 hidden h-[100%] w-fit z-10 pt-10 pb-10`}>
+                    <Image className={``} src={sSvg} alt={`SNUXplore`}/>
                     <ScrollTopButton />
                 </div>
 
-                <Image className={`md:absolute md:left-36 md:bottom-0 md:w-[12%] w-2/3 z-10`} src={auntySvg} alt={`SNUXplore Mascot`}/>
+                <Image className={`md:absolute md:left-28 md:bottom-0 md:w-[13%] w-2/3 z-10`} src={auntySvg} alt={`SNUXplore Mascot`}/>
                 <div className={`md:absolute md:bottom-0 h-[5px] w-full bg-snuxplore-yellow z-10`}></div>
             </footer>
         </div>

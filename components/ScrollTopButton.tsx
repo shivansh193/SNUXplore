@@ -13,7 +13,7 @@ export default function ScrollTopButton () {
     }
 
     return (
-        <button onClick={() => handleScrollTop()} className={`rounded-full`}>
+        <button onMouseDown={() => handleScrollTop()} className={`rounded-full`}>
             <Image className={`w-[125px] aspect-square`} src={scrollTopSvg} alt={`UpArrow`}/>
         </button>
     )
