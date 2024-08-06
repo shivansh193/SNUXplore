@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "SNUXplore",
+  title: "SNUxplore",
   description: "Your gateway to our unique features! We get it, life is hard. Navigating through campus shouldn't be. Unlock everything SNU has to offer. All just a search away",
   authors: [
     // Everyone else please add on ur profiles 😛😛😛
