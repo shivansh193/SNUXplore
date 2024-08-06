@@ -18,6 +18,21 @@ const config = {
       },
     },
     extend: {
+      maxHeight: {
+        '0': '0',
+        '96': '24rem',
+        'none': 'none'
+      },
+      transitionProperty: {
+        'height': 'height',
+        'opacity': 'opacity'
+      },
+      transitionDuration: {
+        '500': '500ms',
+      },
+      transitionTimingFunction: {
+        'in-out': 'ease-in-out',
+      },
       fontFamily: {
         // Montserrat Fonts
         "montserrat-black": ['var(--font-montserrat-black)'],
@@ -53,9 +68,14 @@ const config = {
         'snuxplore-brown':'#231F20',
         'snuxplore-yellow':'#F0BD1A',
         'snuxplore-black':'#1E1E1E',
+        'snuxplore-dark-gray': "#303030",
+        'snuxplore-nav-dark-gray':'#181818',
+        'snuxplore-nav-medium-gray':'#3E3E3E',
+        'snuxplore-nav-light-gray':'#4D4D4D',
         'snuxplore-gray':'#686868',
         'snuxplore-footer-black': '#0F0F0F',
-        'snuxplore-footer-g1': '#E37537',
+        'snuxplore-orange': '#E37537',
+        'snuxplore-dark-orange': '#E37537',
         'snuxplore-footer-g2': '#F0BD1A',
         'snuxplore-member-frame': '#303030',
         border: "hsl(var(--border))",
@@ -108,9 +128,17 @@ const config = {
         },
       },
       animation: {
+        'slide-down': 'slide-down 0.3s ease-out forwards',
+        'slide-up': 'slide-up 0.3s ease-out forwards',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+    },
+  },
+  variants: {
+    extend: {
+      opacity: ['responsive', 'hover', 'focus', 'group-hover'],
+      height: ['responsive', 'hover', 'focus', 'group-hover'],
     },
   },
   plugins: [require("tailwindcss-animate")],
