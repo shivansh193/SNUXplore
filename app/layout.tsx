@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "SNUxplore",
@@ -169,6 +170,9 @@ export default function RootLayout({
     >
       <body className={`${montserratRegular.className}`}>
         {children}
+        <div className={`w-full h-fit grid place-items-center`}>
+          <Navbar />
+        </div>
         <Footer />
       </body>
     </html>

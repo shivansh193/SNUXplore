@@ -76,6 +76,7 @@ const config = {
         'snuxplore-footer-black': '#0F0F0F',
         'snuxplore-orange': '#E37537',
         'snuxplore-dark-orange': '#E37537',
+        'snuxplore-footer-g1': '#E37537',
         'snuxplore-footer-g2': '#F0BD1A',
         'snuxplore-member-frame': '#303030',
         border: "hsl(var(--border))",

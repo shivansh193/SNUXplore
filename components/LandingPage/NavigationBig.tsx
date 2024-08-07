@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 const Navigation = () => {
     const navItems = [
-        { text: "NAVIGATION", color: "yellow" },
-        { text: "FOODXPLORE", color: "yellow", isNew: true },
-        { text: "HEALTH-KIT", color: "yellow" },
-        { text: "ADMIN INFO", color: "yellow" },
-        { text: "SNU-GPT", color: "yellow" }
+        { text: "NAVIGATION", href:'/navigation', color: "yellow", enabled: true },
+        { text: "FOODXPLORE", href:'/food', color: "yellow", isNew: true, enabled: false },
+        { text: "HEALTH-KIT", href:'/health', color: "yellow", enabled: false },
+        { text: "ADMIN INFO", href:'/admin', color: "yellow", enabled: false },
+        { text: "SNU-GPT", href: '/gpt', color: "yellow", enabled: true }
     ];
 
     return (
@@ -18,14 +20,15 @@ const Navigation = () => {
                                 NEW
                             </span>
                         )}
-                        <div
+                        <Link
+                            href={item.href}
                             className={`text-4xl sm:text-6xl md:text-8xl text-snuxplore-yellow hover:text-snuxplore-orange font-nohemi-extrabold 
                                 transition duration-300 ease-in-out 
                                 hover:scale-110 hover:cursor-pointer
                                 hover:shadow-lg`}
                         >
                             {item.text}
-                        </div>
+                        </Link>
                     </li>
                 ))}
             </ul>
