@@ -24,7 +24,7 @@ interface ScrollContainerProps {
 const ScrollContainer: React.FC<ScrollContainerProps> = ({ places }) => {
     const [showHeader, setShowHeader] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-    const [bottomDrawerStatus, setBottomDrawerStatus] = useState<boolean>(false);
+    const [bottomDrawerStatus, setBottomDrawerStatus] = useState<boolean>(true);
     const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
@@ -77,12 +77,14 @@ const ScrollContainer: React.FC<ScrollContainerProps> = ({ places }) => {
                 </div>
             </div>
 
-            <Button className={`flex md:hidden w-full h-fit text-3xl py-4 rounded-none bg-snuxplore-black hover:bg-snuxplore-black absolute z-40 bottom-0 font-nohemi-medium text-snuxplore-yellow`} onClick={()=>setBottomDrawerStatus(true)}>
+            {!bottomDrawerStatus && <Button
+                className={`flex md:hidden w-full h-fit text-3xl py-4 rounded-none bg-snuxplore-black hover:bg-snuxplore-black absolute z-50 bottom-0 font-nohemi-medium text-snuxplore-yellow`}
+                onClick={() => setBottomDrawerStatus(true)}>
                 <ChevronUp size={38} className={'mr-3'}/> Navigate Campus
-            </Button>
+            </Button>}
 
-            <Drawer modal={true} open={bottomDrawerStatus} onClose={() => setBottomDrawerStatus(false)}>
-                <DrawerContent className={'z-50 bg-snuxplore-black border-snuxplore-black h-[85%]'}>
+            <Drawer modal={false} snapPoints={[0.2,1]} open={bottomDrawerStatus} onClose={() => setBottomDrawerStatus(false)}>
+                <DrawerContent className={'z-50 bg-snuxplore-black border-snuxplore-black h-[85%] sm:hidden flex'}>
                     <div className={'px-4 py-4 h-full flex flex-col'}>
                         <div className={'text-2xl w-full text-center font-nohemi-semibold text-snuxplore-yellow'}>
                             Navigate Campus

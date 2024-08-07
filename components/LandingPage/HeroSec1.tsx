@@ -25,7 +25,7 @@ const WelcomeSection = () => {
             <span className="text-xl sm:text-4xl font-nohemi-bold text-snuxplore-orange">9.5k</span>
             <span className="text-xs sm:text-sm block text-snuxplore-orange font-nohemi-semibold">users already <br/> use snuxplore</span>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-start">
             <AvatarButton />
           </div>
           <div className="text-center sm:text-right">
