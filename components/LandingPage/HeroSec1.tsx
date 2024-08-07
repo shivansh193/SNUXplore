@@ -38,7 +38,7 @@ const WelcomeSection = () => {
         </p>
       </div>
       <div className={'w-full h-fit flex flex-col justify-center items-center'}>
-          {/* <Navbar /> */}
+          <Navbar />
       </div>
     </div>
   )
