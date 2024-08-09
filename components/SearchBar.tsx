@@ -34,7 +34,6 @@ export default function SearchBar() {
                         </div>
                     </DialogTrigger>
                     <DialogContent className={`w-[80%] border-2 border-neutral-800 rounded-lg bg-snuxplore-brown text-white px-0 pt-0`}>
-                        {/* <Input className={`text-black`} /> */}
                         <SearchDialogContent />
                     </DialogContent>
                 </Dialog>
@@ -51,6 +50,7 @@ function SearchDialogContent() {
                 <input className={`h-full flex flex-grow rounded-tr-lg outline-none bg-inherit`} placeholder={`Search`}/>
             </div>
             <div className={`px-2`}>
+                {/* Items here */}
             </div>
         </div>
     ) 
