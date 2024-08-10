@@ -62,10 +62,10 @@ const ScrollContainer: React.FC<ScrollContainerProps> = ({ places }) => {
                 <div className={`w-full h-fit text-md mt-2 text-white font-nohemi transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
                     {"We get it, navigating the university can be challenging! But have no worries, We can connect you to resources that will unlock all that Shiv Nadar University has to offer."}
                 </div>
-                <div className={`mt-8 w-full transition-transform duration-300 font-nohemi-regular ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
+                <div className={`mt-8 w-full transition-transform duration-300 font-nohemi-semibold ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
                     <Input
                         className={'w-full'}
-                        placeholder={"Search for location, admin info or anything else"}
+                        placeholder={"Where do you wanna go today?"}
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                     />
