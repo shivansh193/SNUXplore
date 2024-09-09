@@ -1,9 +1,12 @@
-import ComingSoon from "@/components/ComingSoon";
+import HeroSection from "@/components/FoodXplore/HeroSec"
+import FoodExplore from "@/components/FoodXplore/Outlets"
 
-export default function Admin() {
-    return (
-        <div className={`overflow-hidden`}>
-            <ComingSoon />
+const Home=()=>{
+    return(
+        <div>
+        <HeroSection />
+        <FoodExplore />
         </div>
     )
 }
+export default Home;
