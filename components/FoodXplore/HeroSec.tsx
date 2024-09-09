@@ -22,10 +22,11 @@ const HeroSection = () => {
         
         {/* Subheading */}
         <p className="text-lg sm:text-2xl text-white mb-12 max-w-2xl">
-          We get it, life is hard. Finding the best food on campus shouldn't be.
-          Check out the best restaurants and food stalls SNU has to offer. All
-          just a search away.
-        </p>
+  We get it, life is hard. Finding the best food on campus shouldn&#39;t be.
+  Check out the best restaurants and food stalls SNU has to offer. All
+  just a search away.
+</p>
+
 
    
 
