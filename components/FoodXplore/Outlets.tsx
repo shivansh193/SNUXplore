@@ -60,7 +60,7 @@ const FoodExplore = () => {
         What are you <span className="text-yellow-500">craving</span> today?
       </h1>
       <p className="text-center text-gray-300 max-w-md mb-6">
-        Explore the best food options SNU has to offer. Whether you're in the
+        Explore the best food options SNU has to offer. Whether you&#39re in the
         mood for something specific or just browsing for new culinary
         experiences, we&#39ve got you covered. Find your next meal effortlessly
         with FoodXplore.
