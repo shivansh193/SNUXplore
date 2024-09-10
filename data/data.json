@@ -21,16 +21,17 @@
       "location": "https://www.google.com/maps/place/28\u00b031'26.3%22N+77\u00b034'27.0%22E/@28.5249486,77.5748596,18z/data=!3m1!4b1!4m4!3m3!8m2!3d28.52398!4d77.574173?entry=ttu",
       "description": "The perfect place to showcase your creative side",
       "image": "https://i.postimg.cc/1Rnznf56/amphi.jpg",
-      "latitude": 28.5249486,
-      "longitude": 77.5748596
+      "latitude": 28.523989, 
+      "longitude": 77.574300
     },
     {
       "name": "SNU Lake",
-      "location": "https://www.google.com/maps/place/SNU+Lake/@28.5252438,77.5756142,17z/data=!3m1!4b1!4m5!3m4!1s0x390c94dbe0222a6f:0x96c4e051b8e0fe5d!8m2!3d28.5252391!4d77.5778029",
+      "location": "https://maps.app.goo.gl/RKX121MLXkACh1jD8",
       "description": "Head over to the lake behind the academic blocks to catch the most beautiful sunrise",
       "image": "https://i.postimg.cc/2SJc4tT8/lake-snu-Main-800.jpg",
-      "latitude": 28.5252438,
-      "longitude": 77.5756142
+      "latitude": 
+      28.525331,
+      "longitude": 77.576931
     },
     {
       "name": "HCL Health Center",
@@ -49,12 +50,12 @@
       "longitude": 77.57357
     },
     {
-      "name": "A&B Atrium",
-      "location": "https://www.google.co.in/maps/place//@28.526087,77.5764172,19.09z/data=!4m5!3m4!1s0x390c95bad744401f:0x4372c08299fe4057!8m2!3d28.5261641!4d77.5769734",
+      "name": "AnB Atrium",
+      "location": "https://maps.app.goo.gl/EGXRcrihaFhfKyZT7",
       "description": "Between Academic blocks A and B lies burger, pasta and coconut chutney",
       "image": "https://media.giphy.com/media/l3diAVwsxPSylVJBe/giphy.gif",
-      "latitude": 28.526087,
-      "longitude": 77.5764172
+      "latitude": 28.526136,
+      "longitude": 77.576917
     },
     {
       "name": "BioDiversity Park",
@@ -77,29 +78,29 @@
       "location": "https://www.google.co.in/maps/place/Shiv+Nadar+University+Library/@28.5266032,77.5741098,17z/data=!4m12!1m6!3m5!1s0x390ceb4eaaaaaaab:0x321412756718874c!2sShiv+Nadar+University!8m2!3d28.5267298!4d77.575363!3m4!1s0x390c94da1feea4cf:0x4788fa1f42f859a1!8m2!3d28.5248591!4d77.5740441",
       "description": "The best place for socializing, Wi-Fi, AC, books and donuts on campus.",
       "image": "https://i.postimg.cc/tCr9WFfC/lib.jpg",
-      "latitude": 28.5266032,
-      "longitude": 77.5741098
+      "latitude": 28.525010, 
+      "longitude": 77.574915
     }
   ],
   "Residential": [
     {
-      "name": "Hostel 1-A (Sundarbans)",
+      "name": "Hostel 1A (Sundarbans)",
       "location": "https://www.google.co.uk/maps/place/SNU+Hostel+1A/@28.5244496,77.573215,19.42z/data=!4m5!3m4!1s0x390c94d7553aabc9:0xd09ad60822f3d32e!8m2!3d28.5249758!4d77.5730025",
       "description": "Known as Sunderbans.",
       "image": "https://i.postimg.cc/fTzrZmJZ/hostel.jpg",
-      "latitude": 28.5244496,
-      "longitude": 77.573215
+      "latitude": 28.524588, 
+      "longitude":  77.573023
     },
     {
-      "name": "Hostel 1-B (Chilika)",
+      "name": "Hostel 1B (Chilika)",
       "location": "https://www.google.co.uk/maps/place/SNU+Hostel+1B/@28.5244561,77.5732564,19.27z/data=!4m5!3m4!1s0x390c94d7510ccbdd:0xb8501af71093e4e9!8m2!3d28.5241895!4d77.573125",
       "description": "Known as Chilika.",
       "image": "https://i.postimg.cc/fTzrZmJZ/hostel.jpg",
-      "latitude": 28.5244561,
-      "longitude": 77.5732564
+      "latitude": 28.524301, 
+      "longitude": 77.573075
     },
     {
-      "name": "Hostel 1-C (Eagle Nest)",
+      "name": "Hostel 1C (Eagle Nest)",
       "location": "https://www.google.co.uk/maps/place/Hostel-1c,+NH+91,+Greater+Noida,+Uttar+Pradesh+203207/@28.5244585,77.5732597,19.26z/data=!4m5!3m4!1s0x390c94d74c29a3db:0xf9b01ab14fada71d!8m2!3d28.5242294!4d77.5724645",
       "description": "Known as Eagles Nest.",
       "image": "https://i.postimg.cc/fTzrZmJZ/hostel.jpg",
@@ -107,7 +108,7 @@
       "longitude": 77.5732597
     },
     {
-      "name": "Hostel 2-A (Hemis)",
+      "name": "Hostel 2A (Hemis)",
       "location": "https://www.google.co.uk/maps/place/SNU+Hostel+2A/@28.5229857,77.573385,19.92z/data=!4m5!3m4!1s0x390c94d76091882f:0x2d3451c0025004f8!8m2!3d28.5232855!4d77.5731731",
       "description": "Known as Hemis.",
       "image": "https://i.postimg.cc/fTzrZmJZ/hostel.jpg",
@@ -115,7 +116,7 @@
       "longitude": 77.573385
     },
     {
-      "name": "Hostel 2-B (Kaziranga)",
+      "name": "Hostel 2B (Kaziranga)",
       "location": "https://www.google.co.uk/maps/place/Hostel+2B,+SHIV+NADAR+UNIVERSITY,+Greater+Noida,+Uttar+Pradesh+203207/@28.5229857,77.573385,19.92z/data=!4m5!3m4!1s0x390c94d9d9ca2edf:0xa70cb6b29bf4b59a!8m2!3d28.5228032!4d77.5735391",
       "description": "Known as Kaziranga.",
       "image": "https://i.postimg.cc/fTzrZmJZ/hostel.jpg",
@@ -123,7 +124,7 @@
       "longitude": 77.573385
     },
     {
-      "name": "Hostel 2-C (Periyar)",
+      "name": "Hostel 2C (Periyar)",
       "location": "https://www.google.co.uk/maps/place/Hostel+2C,+SHIV+NADAR+UNIVERSITY,+Greater+Noida,+Uttar+Pradesh+203207/@28.5228782,77.5731148,19.92z/data=!4m5!3m4!1s0x390c94d76f41d0ff:0x35d6c2f2e72e5873!8m2!3d28.5227347!4d77.5727335",
       "description": "Known as Periyar.",
       "image": "https://i.postimg.cc/fTzrZmJZ/hostel.jpg",
@@ -131,47 +132,47 @@
       "longitude": 77.5731148
     },
     {
-      "name": "Hostel 3-A (Gir)",
-      "location": "https://www.google.co.uk/maps/place/SNU+Hostel+3A/@28.5249242,77.5711652,19.47z/data=!4m5!3m4!1s0x390c94d0d0db9ac9:0x49344fa730ed5728!8m2!3d28.5252778!4d77.5711111",
+      "name": "Hostel 3A (Gir)",
+      "location": "https://maps.app.goo.gl/dtiy1EGQrgPCzkQv5",
       "description": "Known as Gir.",
       "image": "https://i.postimg.cc/fTzrZmJZ/hostel.jpg",
-      "latitude": 28.5249242,
-      "longitude": 77.5711652
+      "latitude": 28.524862, 
+      "longitude": 77.570837
     },
     {
-      "name": "Hostel 3-B (Dibang)",
+      "name": "Hostel 3B (Dibang)",
       "location": "https://www.google.co.uk/maps/place/SNU+Hostel+3B/@28.5249242,77.5711652,19.47z/data=!4m5!3m4!1s0x390c94d0d48a020b:0x3c320d6380dd4ae3!8m2!3d28.5247002!4d77.5707631",
       "description": "Known as Dibang.",
       "image": "https://i.postimg.cc/fTzrZmJZ/hostel.jpg",
-      "latitude": 28.5249242,
-      "longitude": 77.5711652
+      "latitude": 28.525172, 
+      "longitude": 77.570970
     },
     {
-      "name": "Hostel 3-C (Kanha)",
+      "name": "Hostel 3C (Kanha)",
       "location": "https://www.google.co.uk/maps/place/Hostel+3C/@28.5249242,77.5711652,19.47z/data=!4m5!3m4!1s0x390c94d0cc8985a1:0xe865a4f5fe19f188!8m2!3d28.524809!4d77.5715487",
       "description": "Known as Kanha.",
       "image": "https://i.postimg.cc/fTzrZmJZ/hostel.jpgf",
-      "latitude": 28.5249242,
-      "longitude": 77.5711652
+      "latitude": 28.524857, 
+      "longitude": 77.571364
     },
     {
-      "name": "Hostel 4-A (Manas)",
-      "location": "https://www.google.com/maps/place/28\u00b031'26.1\"N+77\u00b034'13.5\"E/@28.523926,77.5678291,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.523926!4d77.570404?hl=en-IN&entry=ttu",
+      "name": "Hostel 4A (Manas)",
+      "location": "https://maps.app.goo.gl/sVDcyxNA3Gyt8aTZA",
       "description": "Known as Manas.",
       "image": "https://i.postimg.cc/x10bTGmf/4-A-HOSTEL.jpg",
-      "latitude": 28.5239167,
-      "longitude": 77.5704167
+      "latitude": 28.523661, 
+      "longitude": 77.570002
     },
     {
-      "name": "Hostel 4-B (Marine)",
-      "location": "https://www.google.com/maps/place/28\u00b031'26.1\"N+77\u00b034'13.5\"E/@28.523926,77.5678291,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.523926!4d77.570404?hl=en-IN&entry=ttu",
+      "name": "Hostel 4B (Marine)",
+      "location": "https://maps.app.goo.gl/sRXCqu6a7YMmszfF7",
       "description": "Known as Marine.",
       "image": "https://i.postimg.cc/SRFn0cqp/4-B-HOSTEL.jpg",
-      "latitude": 28.5239167,
-      "longitude": 77.5704167
+      "latitude": 28.524055, 
+      "longitude": 77.570107
     },
     {
-      "name": "Hostel 4-C (Mudumalai)",
+      "name": "Hostel 4C (Mudumalai)",
       "location": "https://www.google.com/maps/place/28\u00b031'24.4\"N+77\u00b034'15.6\"E/@28.5234525,77.5684313,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.5234525!4d77.5710062?hl=en-IN&entry=ttu",
       "description": "Known as Mudumalai.",
       "image": "https://i.postimg.cc/6QP70Dmq/4-C-HOSTEL.jpg",
@@ -179,20 +180,28 @@
       "longitude": 77.571
     },
     {
-      "name": "Hostel 5-A (Belta)",
-      "location": "https://www.google.com/maps/place/28\u00b031'22.4\"N+77\u00b034'13.0\"E/@28.5228916,77.567691,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.5228916!4d77.5702659?hl=en-IN&entry=ttu",
+      "name": "Hostel 5A (Belta)",
+      "location": "https://maps.app.goo.gl/iGtCbSKHhKmsn1rS7",
       "description": "Known as Belta.",
       "image": "https://i.postimg.cc/FKzd09Gw/5A.jpg",
-      "latitude": 28.5228889,
-      "longitude": 77.5702778
+      "latitude": 28.522599,
+      "longitude": 77.569385
     },
     {
-      "name": "Hostel 5-C (Bandhavgarh)",
-      "location": "https://www.google.com/maps/place/28\u00b031'20.7\"N+77\u00b034'12.0\"E/@28.5224079,77.5674194,17z/data=!4m4!3m3!8m2!3d28.5224079!4d77.5699943?hl=en-IN&entry=ttu",
+      "name": "Hostel 5B(Bandipur)",
+      "location": "https://maps.app.goo.gl/UkPbgbRmcdT5NSYH8",
+      "description": "Known as Belta.",
+      "image": "https://i.postimg.cc/FKzd09Gw/5A.jpg",
+      "latitude": 28.522612,
+      "longitude": 77.570440
+    },
+    {
+      "name": "Hostel 5C (Bandhavgarh)",
+      "location": "https://maps.app.goo.gl/5bmTFon1GDg1vCMA9",
       "description": "Known as Bandhavgarh.",
       "image": "https://i.postimg.cc/NMrKPp34/5C.jpg",
-      "latitude": 28.5224167,
-      "longitude": 77.57
+      "latitude": 28.522925,
+      "longitude": 77.569519
     },
     {
       "name": "Tower 1",
@@ -351,6 +360,14 @@
       "longitude": 77.5723814
     },
     {
+      "name": "CnD",
+      "location": "https://maps.app.goo.gl/GwyrHTeAGcvqBbJ2A",
+      "description": "The dining hall with the most number of attractions for a foodie with evening snacks to midnight snacks.",
+      "image": "https://media.giphy.com/media/3oFzmbUHo6NhLwhv8Y/giphy.gif",
+      "latitude": 28.525418,
+      "longitude": 77.576297
+    },
+    {
       "name": "Dining Hall 2",
       "location": "https://www.google.co.in/maps/place/SNU+Dining+Hall+2+(DH2)/@28.524562,77.5723814,444m/data=!3m1!1e3!4m5!3m4!1s0x390c94d6d4d1d383:0x1fc8dccb532d3714!8m2!3d28.5244157!4d77.5704472",
       "description": "Order food, collect food, eat food.Waiting in long lines to ponder if the food's worth it.",
@@ -371,8 +388,8 @@
       "location": "https://www.google.co.in/maps/place/SNU+Volleyball+Court/@28.5251485,77.5728984,18.7z/data=!4m5!3m4!1s0x390c94d0b999ead5:0x29e1febf964a8f9a!8m2!3d28.5244324!4d77.5717481",
       "description": "The best and only place for donuts on campus. Your go to place for espresso shots in those late nights.",
       "image": "https://media.giphy.com/media/mBLYrKaZJACmtum22X/giphy.gif",
-      "latitude": 28.5251485,
-      "longitude": 77.5728984
+      "latitude": 28.525010, 
+      "longitude": 77.574915
     },
     {
       "name": "Naveen Tea House",
@@ -445,8 +462,8 @@
       "location": "https://www.google.co.in/maps/place/Parking+One/@28.5252819,77.573448,17.76z/data=!4m12!1m6!3m5!1s0x390ceb4eaaaaaaab:0x321412756718874c!2sShiv+Nadar+University!8m2!3d28.5267298!4d77.575363!3m4!1s0x390c94d9f0d15827:0xdcf98ff998034426!8m2!3d28.5245085!4d77.5742751",
       "description": "",
       "image": "https://media.giphy.com/media/KIW5Aiz8xEflu/giphy.gif",
-      "latitude": 28.5252819,
-      "longitude": 77.573448
+      "latitude": 28.523989, 
+      "longitude": 77.574300
     },
     {
       "name": "Parking 2",
@@ -564,27 +581,27 @@
     },
     {
       "name": "Basketball Court-2",
-      "location": "https://www.google.co.in/maps/@28.524264,77.5714902,19.72z",
+      "location": "https://maps.app.goo.gl/AkHPc4coYK9cbqHG9",
       "description": "",
       "image": "https://media.giphy.com/media/3oFzmbUHo6NhLwhv8Y/giphy.gif",
-      "latitude": 28.524264,
-      "longitude": 77.5714902
+      "latitude": 28.523966,
+      "longitude": 77.571325
     },
     {
       "name": "Football Field",
-      "location": "https://www.google.com/maps/place/SNU+Football+Field/@28.5233855,77.5713738,18z/data=!3m1!4b1!4m5!3m4!1s0x390c94d74065430d:0x5c06333745fb65c7!8m2!3d28.5233841!4d77.5720214",
+      "location": "https://maps.app.goo.gl/uSWt26MbdxvLfY7f6",
       "description": "",
       "image": "https://media.giphy.com/media/26FL4BhNXmo8PNLYk/giphy.gif",
-      "latitude": 28.5233855,
-      "longitude": 77.5713738
+      "latitude": 28.523017, 
+      "longitude": 77.571796
     },
     {
       "name": "Tennis Court",
-      "location": "https://www.google.com/maps/place/Tennis+Court/@28.5237367,77.5692795,17.72z/data=!4m9!1m2!2m1!1ssnu+tennis+court!3m5!1s0x390c94d7304dbfc1:0x20c793f34b3b9e8f!8m2!3d28.5240682!4d77.571384!15sChBzbnUgdGVubmlzIGNvdXJ0kgEMdGVubmlzX2NvdXJ0",
+      "location": "https://maps.app.goo.gl/YaUHH3ADZo9GGdtK6",
       "description": "",
       "image": "https://media.giphy.com/media/3ormFEYnZ1Mf71p5Uf/giphy.gif",
-      "latitude": 28.5237367,
-      "longitude": 77.5692795
+      "latitude": 28.523948,
+      "longitude": 77.571550
     },
     {
       "name": "Volleyball Court",
