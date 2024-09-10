@@ -50,11 +50,11 @@ const DialogflowMessenger: React.FC = () => {
       const style = document.createElement("style");
       style.innerHTML = `
        df-messenger {
-        z-index: 9999;
+        z-index: 100000;
         position: fixed;
         right: 0;
         width: 100vw;
-        height: 80vh;
+        height: 100vh;
         --df-messenger-font-color: #000000;
         --df-messenger-font-family: Google Sans;
         --df-messenger-chat-background: #172449;

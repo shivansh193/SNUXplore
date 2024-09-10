@@ -171,14 +171,13 @@ export default function RootLayout({
 <head>
 
 </head>
-<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
       <body className={`${montserratRegular.className}`}>
         {children}
         <div className={`w-full h-fit grid place-items-center`}>
           <Navbar />
         </div>
         <div >
-          <Footer />
+          
         </div>
       </body>
     </html>

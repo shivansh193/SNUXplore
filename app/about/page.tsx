@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import MemberGallery from '@/components/MemberGallery';
 import foundersPng from '@/public/founders.png';
 import Image from 'next/image';
@@ -33,7 +34,9 @@ export default function About() {
                 <div className={`mt-4`}>
                     <MemberGallery />
                 </div>
+                
             </div>
+            <Footer />
         </div>
     )
 }

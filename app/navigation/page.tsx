@@ -4,6 +4,7 @@ import NavigationCard from "@/components/NavigationCard";
 import { Places } from "@/models/interfaces";
 import { promises as fs } from "fs";
 import ScrollContainer from "@/components/ScrollContainer";
+import Footer from "@/components/Footer";
 
 export default async function Home() {
     // Read and parse the JSON data
@@ -23,8 +24,12 @@ export default async function Home() {
     );
 
     return (
+        <div>
         <div className={'h-screen w-full bg-white flex flex-row'}>
             <ScrollContainer places={places}/>
+
+        </div>
+        <Footer />
         </div>
     );
 }
