@@ -362,7 +362,7 @@
     {
       "name": "CnD",
       "location": "https://maps.app.goo.gl/GwyrHTeAGcvqBbJ2A",
-      "description": "The dining hall with the most number of attractions for a foodie with evening snacks to midnight snacks.",
+      "description": "Your favorite CnD, with the best coffee rolls and chai on campus",
       "image": "https://media.giphy.com/media/3oFzmbUHo6NhLwhv8Y/giphy.gif",
       "latitude": 28.525418,
       "longitude": 77.576297
@@ -372,8 +372,8 @@
       "location": "https://www.google.co.in/maps/place/SNU+Dining+Hall+2+(DH2)/@28.524562,77.5723814,444m/data=!3m1!1e3!4m5!3m4!1s0x390c94d6d4d1d383:0x1fc8dccb532d3714!8m2!3d28.5244157!4d77.5704472",
       "description": "Order food, collect food, eat food.Waiting in long lines to ponder if the food's worth it.",
       "image": "https://media.giphy.com/media/3oFzmbUHo6NhLwhv8Y/giphy.gif",
-      "latitude": 28.524562,
-      "longitude": 77.5723814
+      "latitude": 28.524422, 
+      "longitude": 77.570528
     },
     {
       "name": "Dining Hall 3",
