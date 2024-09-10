@@ -168,12 +168,18 @@ export default function RootLayout({
         ${nohemiLight.variable} ${nohemiMedium.variable} ${nohemiRegular.variable} ${nohemiSemiBold.variable} 
         ${nohemiThin.variable}`}
     >
+<head>
+
+</head>
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
       <body className={`${montserratRegular.className}`}>
         {children}
         <div className={`w-full h-fit grid place-items-center`}>
           <Navbar />
         </div>
-        <Footer />
+        <div >
+          <Footer />
+        </div>
       </body>
     </html>
   );

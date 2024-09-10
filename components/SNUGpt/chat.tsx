@@ -18,6 +18,7 @@ const ChatInterface = () => {
   };
 
   return (
+    
     <div className="flex flex-col h-screen bg-gray-900 text-white">
       {/* Chat Header */}
       <div className="w-full h-fit py-4 px-6 text-3xl text-white flex flex-row items-center font-nohemi-semibold space-x-4 bg-gray-800 shadow-md">
