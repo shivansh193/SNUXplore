@@ -177,7 +177,7 @@ export default function RootLayout({
           <Navbar />
         </div>
         <div >
-          
+          <Footer />
         </div>
       </body>
     </html>

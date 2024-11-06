@@ -1,11 +1,14 @@
-import Footer from '@/components/Footer'
-import DialogflowMessenger from '../../../components/SNUGpt/DialogFlow'
+
+import SearchBar from '@/components/SearchBar'
+import Chat from '@/components/SNUGpt/chat'
 
 export default function Home() {
   return (
     <main>
+     
       <div className="chat-container">
-        <DialogflowMessenger />
+        <SearchBar />
+        <Chat />
     
       </div>
     </main>
