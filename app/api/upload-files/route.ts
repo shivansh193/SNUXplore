@@ -3,7 +3,7 @@ import path from 'path';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { GoogleAIFileManager } from '@google/generative-ai/server';
 
-const apiKey = process.env.GEMINI_API_KEY;
+const apiKey = "AIzaSyBRNIh7mzvhUYL72fTyYx_O1pEniHyUe2c"
 
 if (!apiKey) {
   throw new Error("GEMINI_API_KEY environment variable is not set.");
@@ -69,7 +69,7 @@ async function initializeChatSession() {
             },
           },
           {
-            text: 'You are a bot designed by the SNUXplore team at Shiv Nadar University...',
+            text: 'You are a bot designed by the SNUXplore team at Shiv Nadar university, You are designed to help out students with any queries they might have about the college. Most of your answers will be inclduded in the documents I am sharing with you. Other than that, Answer other questions in a humourous way. Make sure its funny and good humour.',
           },
         ],
       },

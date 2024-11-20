@@ -1,0 +1,1134 @@
+{
+    "Fatguy":[
+     {
+      "Item": "Classic margherita",
+      "Price": "175\/ 245\/ 445",
+      "Column3": "Pizza"
+     },
+     {
+      "Item": "Tandoori Paneer",
+      "Price": "205\/ 295\/ 495"
+     },
+     {
+      "Item": "Mexican Green",
+      "Price": "195\/ 275\/ 475"
+     },
+     {
+      "Item": "Farmer Veggies",
+      "Price": "195\/ 275\/ 475"
+     },
+     {
+      "Item": "Spicy Bomb",
+      "Price": "195\/ 275\/ 475"
+     },
+     {
+      "Item": "Paneer Tikka Masala",
+      "Price": "205\/ 295\/ 495"
+     },
+     {
+      "Item": "Spicy Garlic Chicken",
+      "Price": "225\/ 325\/ 525"
+     },
+     {
+      "Item": "Fire Cracker Chiken",
+      "Price": "225\/ 325\/ 525"
+     },
+     {
+      "Item": "Chicken Tikka Masala",
+      "Price": "225\/ 325\/ 525"
+     },
+     {
+      "Item": "Chicken Lover",
+      "Price": "245\/ 345\/ 545"
+     },
+     {
+      "Item": "Peri Peri Chicken",
+      "Price": "225\/ 325\/ 525"
+     },
+     {
+      "Item": "Three Cheese Mac & Cheese",
+      "Price": "295\/ 345",
+      "Column3": "Pasta"
+     },
+     {
+      "Item": "Panne Arrabiata",
+      "Price": "295\/ 345"
+     },
+     {
+      "Item": "Fusilli Alfredo",
+      "Price": "295\/ 345"
+     },
+     {
+      "Item": "Mix Sause Pasta",
+      "Price": "295\/ 345"
+     },
+     {
+      "Item": "Spaghetti Aglio Olio",
+      "Price": "295\/ 345"
+     },
+     {
+      "Item": "Delhi Makhni Pasta",
+      "Price": 425
+     },
+     {
+      "Item": "French Fries ",
+      "Price": 155,
+      "Column3": "Appetieser"
+     },
+     {
+      "Item": "Dirty Fries",
+      "Price": 175
+     },
+     {
+      "Item": "French Bread Pizza",
+      "Price": 175
+     },
+     {
+      "Item": "Cheese & Jalapeno Bombs",
+      "Price": 295
+     },
+     {
+      "Item": "Crispy Fried Chicken Strips",
+      "Price": 325
+     },
+     {
+      "Item": "Fish & Chips",
+      "Price": 345
+     },
+     {
+      "Item": "Chocolate",
+      "Price": 245,
+      "Column3": "Desert"
+     },
+     {
+      "Item": "Red Velvet",
+      "Price": 245
+     }
+    ],
+    "Koyla Kebab":[
+     {
+      "Vegetable Kokori Kebab": "Vegetable Colouti Kebab",
+      "150": 170
+     },
+     {
+      "Vegetable Kokori Kebab": "Tandoori Mushroom Tikka",
+      "150": 190
+     },
+     {
+      "Vegetable Kokori Kebab": "Tandoori Paneer Tikka",
+      "150": 220
+     },
+     {
+      "Vegetable Kokori Kebab": "Tandoori Aloo Tikka",
+      "150": 190
+     },
+     {
+      "Vegetable Kokori Kebab": "Tandoori Soya Choop",
+      "150": 190
+     },
+     {
+      "Vegetable Kokori Kebab": "Malai Soya Choop",
+      "150": 220
+     },
+     {
+      "Vegetable Kokori Kebab": "Mutton Kakori Kebab",
+      "150": 200
+     },
+     {
+      "Vegetable Kokori Kebab": "Mutton Galouti Kebab",
+      "150": 210
+     },
+     {
+      "Vegetable Kokori Kebab": "Mutton Seekh Kebab",
+      "150": 200
+     },
+     {
+      "Vegetable Kokori Kebab": "Peshawari Mutton Chapli Kebab",
+      "150": 210
+     },
+     {
+      "Vegetable Kokori Kebab": "Mutton Boti Tikka",
+      "150": 250
+     },
+     {
+      "Vegetable Kokori Kebab": "Chicken Biryani",
+      "150": 250
+     },
+     {
+      "Vegetable Kokori Kebab": "Vegetable Biryani",
+      "150": 220
+     },
+     {
+      "Vegetable Kokori Kebab": "Vegetarian Kebabs",
+      "150": 450
+     },
+     {
+      "Vegetable Kokori Kebab": "Non-Vegetarian Kebabs",
+      "150": 550
+     },
+     {
+      "Vegetable Kokori Kebab": "Vegetable Kakori Wraps",
+      "150": 180
+     },
+     {
+      "Vegetable Kokori Kebab": "Chicken Kakori Wrap",
+      "150": 200
+     },
+     {
+      "Vegetable Kokori Kebab": "Mutton Kakori Wrop",
+      "150": 220
+     },
+     {
+      "Vegetable Kokori Kebab": "Butter Chicken Platter",
+      "150": 250
+     },
+     {
+      "Vegetable Kokori Kebab": "Dal Makhni Platter",
+      "150": 200
+     },
+     {
+      "Vegetable Kokori Kebab": "Paneer Makhni Platter",
+      "150": 230
+     },
+     {
+      "Vegetable Kokori Kebab": "Vegetarion Kakari Roll",
+      "150": "150\/ 180"
+     },
+     {
+      "Vegetable Kokori Kebab": "Paneer Tika Roll",
+      "150": "190\/ 220"
+     },
+     {
+      "Vegetable Kokori Kebab": "Mushroom Tikaa Roll",
+      "150": "170\/ 200"
+     },
+     {
+      "Vegetable Kokori Kebab": "Vegetable Galouti Roll",
+      "150": "170\/ 200"
+     },
+     {
+      "Vegetable Kokori Kebab": "Tandoori Soyo Roll",
+      "150": "180\/ 210"
+     },
+     {
+      "Vegetable Kokori Kebab": "Malai Soya ROll",
+      "150": "190\/ 220"
+     },
+     {
+      "Vegetable Kokori Kebab": "Chicken Seekh Roll",
+      "150": "150\/ 180"
+     },
+     {
+      "Vegetable Kokori Kebab": "Tandoori Chicken Tikka Roll",
+      "150": "190\/ 220"
+     },
+     {
+      "Vegetable Kokori Kebab": "Malai Chicken Tikka roll",
+      "150": "200\/ 230"
+     },
+     {
+      "Vegetable Kokori Kebab": "Kaali Mirch Chicken Tikko Roll",
+      "150": "210\/ 240"
+     },
+     {
+      "Vegetable Kokori Kebab": "Chicken Kakori Roll",
+      "150": "190\/ 220"
+     },
+     {
+      "Vegetable Kokori Kebab": "Chicken Galouti Roll",
+      "150": "210\/ 240"
+     },
+     {
+      "Vegetable Kokori Kebab": "Mutton Seekh Roll",
+      "150": "220\/ 250"
+     },
+     {
+      "Vegetable Kokori Kebab": "Mutton Kakori Roll",
+      "150": "220\/ 250"
+     },
+     {
+      "Vegetable Kokori Kebab": "Mutton Galouti Roll",
+      "150": "240\/ 270"
+     },
+     {
+      "Vegetable Kokori Kebab": "Mutton Boti Tikka Roll",
+      "150": "250\/ 280"
+     },
+     {
+      "Vegetable Kokori Kebab": "Tandoori Chicken (2pcs) ",
+      "150": "150\/ 250\/ 450"
+     },
+     {
+      "Vegetable Kokori Kebab": "Afghani Chicken (2pcs) ",
+      "150": "170\/ 270\/ 470"
+     },
+     {
+      "Vegetable Kokori Kebab": "Peshawari Chapli Kebab ",
+      "150": 150
+     },
+     {
+      "Vegetable Kokori Kebab": "Reshmi Chicken Seekh",
+      "150": 150
+     },
+     {
+      "Vegetable Kokori Kebab": "Chicken Kakori Kebab ",
+      "150": 170
+     },
+     {
+      "Vegetable Kokori Kebab": "Chicken Galouti Kebab ",
+      "150": 190
+     },
+     {
+      "Vegetable Kokori Kebab": "Tandoori Chicken Tikka (6pcs) ",
+      "150": 190
+     },
+     {
+      "Vegetable Kokori Kebab": "Malai Chicken Tikka (6pcs) ",
+      "150": 210
+     },
+     {
+      "Vegetable Kokori Kebab": "Kaali Mirch Chicken Tikka (6pcs) ",
+      "150": 220
+     },
+     {
+      "Vegetable Kokori Kebab": "Chicken Special Rolls \/ Makhni Rolls \\",
+      "150": 190
+     },
+     {
+      "Vegetable Kokori Kebab": "Paneer Special Rolls \/ Makhni Rolls ",
+      "150": 190
+     },
+     {
+      "Vegetable Kokori Kebab": "Rumali Roti ",
+      "150": 20
+     },
+     {
+      "Vegetable Kokori Kebab": "Warqi Parantha",
+      "150": 50
+     }
+    ],
+    "mama fu":[
+     {
+      "food": "Vegetable Hakka Noodles: ",
+      "cost": 145
+     },
+     {
+      "food": "Szechuan Noodles: ",
+      "cost": 175
+     },
+     {
+      "food": "Vegetable Chilli Garlic Noodles: ",
+      "cost": 195
+     },
+     {
+      "food": "Veg Chowmein: ",
+      "cost": 145
+     },
+     {
+      "food": "Singapore Noodles:",
+      "cost": 195
+     },
+     {
+      "food": "Vegetable Fried Rice: ",
+      "cost": 145
+     },
+     {
+      "food": "Chilli Garlic Fried Rice:",
+      "cost": 175
+     },
+     {
+      "food": "Szechuan Fried Rice:",
+      "cost": 195
+     },
+     {
+      "food": "Singapore Fried Rice: ",
+      "cost": 195
+     },
+     null,
+     {
+      "food": "Desserts:"
+     },
+     null,
+     {
+      "food": "Chocolate: ",
+      "cost": 245
+     },
+     {
+      "food": "Red Velvet: ",
+      "cost": 245
+     },
+     null,
+     {
+      "food": "Add-ons:"
+     },
+     null,
+     {
+      "food": "Vegetable: ",
+      "cost": 25
+     },
+     {
+      "food": "Egg: ",
+      "cost": 25
+     },
+     {
+      "food": "Chicken: ",
+      "cost": 45
+     },
+     {
+      "food": "Fish: ",
+      "cost": 75
+     },
+     null,
+     {
+      "food": "Spring Roll (4 pcs)",
+      "cost": 175
+     },
+     {
+      "food": "Honey Chilli Potato",
+      "cost": 165
+     },
+     {
+      "food": "Vegetable Salt & Pepper",
+      "cost": 195
+     },
+     {
+      "food": "Vegetable Manchurian",
+      "cost": 195
+     },
+     {
+      "food": "Chilli Paneer",
+      "cost": 225
+     },
+     {
+      "food": "Chilli Chicken",
+      "cost": 275
+     },
+     {
+      "food": "Chicken Karaage",
+      "cost": 250
+     },
+     {
+      "food": "Chilli Garlic Fish",
+      "cost": 295
+     },
+     {
+      "food": "Chicken Manchurian",
+      "cost": 275
+     },
+     {
+      "food": "Chicken Lollypop",
+      "cost": 275
+     },
+     {
+      "food": "Spicy Veg (Steamed | Kurkure | Saucy | Fried | Pan Fried)",
+      "cost": "125 \/ 150 \/ 165 \/ 135 \/ 145"
+     },
+     {
+      "food": "Cheese Pepper Pocket (Deep Fried)",
+      "cost": 195
+     },
+     {
+      "food": "Classic Chicken (Steamed | Kurkure | Saucy | Fried | Pan Fried)",
+      "cost": "150 \/ 175 \/ 190 \/ 165 \/ 155"
+     }
+    ],
+    "Naveen":[
+     {
+      "Item": "Ginger Tea",
+      "cost": 20
+     },
+     {
+      "Item": "Coffee",
+      "cost": 30
+     },
+     {
+      "Item": "Hot Chocolate",
+      "cost": 40
+     },
+     {
+      "Item": "Hot Bournvita",
+      "cost": 40
+     },
+     {
+      "Item": "Hot Horlicks Plain",
+      "cost": 40
+     },
+     {
+      "Item": "Hot Boost",
+      "cost": 40
+     },
+     {
+      "Item": "Filter Coffee",
+      "cost": 25
+     },
+     {
+      "Item": "Lemon Tea",
+      "cost": 25
+     },
+     {
+      "Item": "Green Tea",
+      "cost": 25
+     },
+     {
+      "Item": "Honey Green Tea",
+      "cost": 30
+     },
+     {
+      "Item": "Black Coffee",
+      "cost": 25
+     },
+     {
+      "Item": "Kesar Milk",
+      "cost": 40
+     },
+     {
+      "Item": "Badam Milk",
+      "cost": 40
+     },
+     {
+      "Item": "Pista Hot Milk",
+      "cost": 40
+     },
+     {
+      "Item": "Hot Horlicks Chocolate",
+      "cost": 40
+     },
+     {
+      "Item": "Veg & Plain Maggie",
+      "cost": 40
+     },
+     {
+      "Item": "Cheese Maggie",
+      "cost": 50
+     },
+     {
+      "Item": "Corn Flakes",
+      "cost": 50
+     },
+     {
+      "Item": "Chocos",
+      "cost": 60
+     },
+     {
+      "Item": "Muesli",
+      "cost": 60
+     },
+     {
+      "Item": "Cold Coffee",
+      "cost": "₹40\/₹50"
+     },
+     {
+      "Item": "Chocolate Shake",
+      "cost": "₹50\/₹70"
+     },
+     {
+      "Item": "Bournvita Shake",
+      "cost": "₹50\/₹70"
+     },
+     {
+      "Item": "Boost Shake",
+      "cost": "₹50\/₹70"
+     },
+     {
+      "Item": "Horlicks Shake",
+      "cost": "₹50\/₹70"
+     },
+     {
+      "Item": "Chocolate Horlicks Shake",
+      "cost": "₹50\/₹70"
+     },
+     {
+      "Item": "Kesar Milk Shake",
+      "cost": "₹50\/₹70"
+     },
+     {
+      "Item": "Chocolate Milk",
+      "cost": "₹50\/₹70"
+     },
+     {
+      "Item": "Badam Milk",
+      "cost": "₹50\/₹70"
+     },
+     {
+      "Item": "Pista Cold Milk",
+      "cost": "₹50\/₹70"
+     },
+     {
+      "Item": "Ice Tea (Small, Medium, Large)",
+      "cost": "₹30\/ 40\/ 60"
+     },
+     {
+      "Item": "Ice Black Coffee",
+      "cost": "₹30"
+     },
+     {
+      "Item": "Kit Kat Shake",
+      "cost": "₹70"
+     },
+     {
+      "Item": "Thandi Shake",
+      "cost": "₹50"
+     },
+     {
+      "Item": "Ice Cream Shake",
+      "cost": "₹60"
+     },
+     {
+      "Item": "Hot Mocha",
+      "cost": "₹40"
+     },
+     {
+      "Item": "Plain Hot Milk",
+      "cost": "₹25"
+     },
+     {
+      "Item": "Haldi Milk",
+      "cost": "₹25"
+     },
+     null,
+     {
+      "cost": "₹25"
+     }
+    ],
+    "one rama":[
+     {
+      "items": "Lemon Water",
+      "cost": "₹20"
+     },
+     {
+      "items": "Lemon Soda",
+      "cost": "₹25"
+     },
+     {
+      "items": "Oreo Shake",
+      "cost": "₹40"
+     },
+     {
+      "items": "Cold Coffee",
+      "cost": "₹40"
+     },
+     {
+      "items": "Fruit Salad",
+      "cost": "₹50"
+     },
+     {
+      "items": "Special Lassi",
+      "cost": "₹40"
+     },
+     {
+      "items": "Moshmi Juice",
+      "cost": "₹45\/₹65"
+     },
+     {
+      "items": "Orange Juice",
+      "cost": "₹45\/₹65"
+     },
+     {
+      "items": "Pineapple Juice",
+      "cost": "₹45\/₹65"
+     },
+     {
+      "items": "Carrot Juice",
+      "cost": "₹45\/₹65"
+     },
+     {
+      "items": "Mix Fruit Juice",
+      "cost": "₹50\/₹70"
+     },
+     {
+      "items": "Banana Shake",
+      "cost": "₹30\/₹60"
+     },
+     {
+      "items": "Apple Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Papaya Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Sapota Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Mango Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Kit Kat Shake",
+      "cost": "₹40"
+     },
+     {
+      "items": "Badam Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Strawberry Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Kiwi Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Litchi Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Black Current Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Butter Scotch Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Vanilla Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Rose Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Chocolate Shake",
+      "cost": "₹40\/₹60"
+     },
+     {
+      "items": "Rasmalai",
+      "cost": "₹40\/₹60"
+     }
+    ],
+    "Swad Kathi roll":[
+     {
+      "Items": "Double Egg Roll",
+      "Cost": 70
+     },
+     {
+      "Items": "Choumin Roll",
+      "Cost": 70
+     },
+     {
+      "Items": "Chilli Garlic Potato Pop Roll",
+      "Cost": 70
+     },
+     {
+      "Items": "Aloo Tikki Roll",
+      "Cost": 70
+     },
+     {
+      "Items": "Veg Nuggters Roll",
+      "Cost": 80
+     },
+     {
+      "Items": "Veg. Manchurian Roll",
+      "Cost": 80
+     },
+     {
+      "Items": "Bhuna Soya Kabab Roll",
+      "Cost": 90
+     },
+     {
+      "Items": "Cheese Potato Ball Roll",
+      "Cost": 90
+     },
+     {
+      "Items": "Hara Bhara Roll",
+      "Cost": 90
+     },
+     {
+      "Items": "Soya Malai Chaap (Roll)",
+      "Cost": 100
+     },
+     {
+      "Items": "Soya Malai Chaap (Half)",
+      "Cost": 100
+     },
+     {
+      "Items": "Afghani Chaap (Roll)",
+      "Cost": 100
+     },
+     {
+      "Items": "Afghani Chaap (Half)",
+      "Cost": 100
+     },
+     {
+      "Items": "Achari Chaap (Roll)",
+      "Cost": 120
+     },
+     {
+      "Items": "Achari Chaap (Half)",
+      "Cost": 120
+     },
+     {
+      "Items": "Masala Fries",
+      "Cost": 150
+     },
+     {
+      "Items": "French Fries",
+      "Cost": 150
+     },
+     {
+      "Items": "Loaded Potato Veggies",
+      "Cost": 150
+     },
+     {
+      "Items": "Peri Peri French Fries",
+      "Cost": 150
+     },
+     {
+      "Items": "Potato Veggies",
+      "Cost": 150
+     },
+     {
+      "Items": "Bombay Vada Pav",
+      "Cost": 90
+     },
+     {
+      "Items": "Boil Egg 2 Pc.",
+      "Cost": 70
+     },
+     {
+      "Items": "Egg Fry 2 Pc.",
+      "Cost": 80
+     },
+     {
+      "Items": "Aloo Paratha with Butter, Pickle",
+      "Cost": 60
+     },
+     {
+      "Items": "Paneer Paratha with Butter, Pickle",
+      "Cost": 60
+     },
+     {
+      "Items": "Gobhi Paratha with Butter, Pickle",
+      "Cost": 60
+     },
+     {
+      "Items": "Mooli Paratha with Butter, Pickle",
+      "Cost": 60
+     },
+     {
+      "Items": "Mix Paratha with Butter, Pickle",
+      "Cost": 60
+     },
+     {
+      "Items": "Plain Egg Paratha with Butter, Pickle",
+      "Cost": 60
+     },
+     {
+      "Items": "Paneer Tikka Kathi Roll",
+      "Cost": 100
+     },
+     {
+      "Items": "Egg Paneer Tikka Kathi Roll",
+      "Cost": 110
+     },
+     {
+      "Items": "Double Egg Paneer Tikka Kathi Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Double Paneer Tikka Kathi Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Egg Double Paneer Tikka Kathi Roll",
+      "Cost": 130
+     },
+     {
+      "Items": "Egg Double Egg Double Paneer Tikka Kathi Roll",
+      "Cost": 140
+     },
+     {
+      "Items": "Chicken Tikka Kathi Roll",
+      "Cost": 100
+     },
+     {
+      "Items": "Egg Chicken Tikka Kathi Roll",
+      "Cost": 110
+     },
+     {
+      "Items": "Double Egg Chicken Tikka Kathi Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Double Chicken Tikka Kathi Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Egg Double Chicken Tikka Kathi Roll",
+      "Cost": 130
+     },
+     {
+      "Items": "Egg Double Egg Double Chicken Tikka Kathi Roll",
+      "Cost": 140
+     },
+     {
+      "Items": "Chicken Seekh Kabab Roll",
+      "Cost": 90
+     },
+     {
+      "Items": "Egg Chicken Seekh Kabab Roll",
+      "Cost": 100
+     },
+     {
+      "Items": "Double Egg Chicken Seekh Kabab Roll",
+      "Cost": 110
+     },
+     {
+      "Items": "Double Chicken Seekh Kabab Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Egg Double Chicken Seekh Kabab Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Egg Double Egg Double Chicken Seekh Kabab Roll",
+      "Cost": 130
+     },
+     {
+      "Items": "Mutton Seekh Kabab Roll",
+      "Cost": 100
+     },
+     {
+      "Items": "Egg Mutton Seekh Kabab Roll",
+      "Cost": 110
+     },
+     {
+      "Items": "Double Mutton Seekh Kabab Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Double Egg Mutton Seekh Kabab Roll",
+      "Cost": 130
+     },
+     {
+      "Items": "Double Mutton Seekh Kabab Roll",
+      "Cost": 130
+     },
+     {
+      "Items": "Egg Double Mutton Seekh Kabab Roll",
+      "Cost": 140
+     },
+     {
+      "Items": "Egg Double Egg Double Mutton Seekh Kabab Roll",
+      "Cost": 140
+     },
+     {
+      "Items": "Mutton Gulaothi Roll",
+      "Cost": 100
+     },
+     {
+      "Items": "Egg Mutton Gulaothi Roll",
+      "Cost": 110
+     },
+     {
+      "Items": "Double Egg Mutton Gulaothi Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Double Mutton Gulaothi Roll",
+      "Cost": 130
+     },
+     {
+      "Items": "Egg Double Mutton Gulaothi Roll",
+      "Cost": 130
+     },
+     {
+      "Items": "Egg Double Egg Double Mutton Gulaothi Roll",
+      "Cost": 140
+     },
+     {
+      "Items": "Veggie Supreme Pizza",
+      "Cost": 130
+     },
+     {
+      "Items": "Cheese & Corn Pizza",
+      "Cost": 130
+     },
+     {
+      "Items": "Paneer Pizza",
+      "Cost": 140
+     },
+     {
+      "Items": "Mushroom Pizza",
+      "Cost": 100
+     },
+     {
+      "Items": "Plain Cheese Pizza",
+      "Cost": 100
+     },
+     {
+      "Items": "Onion Pizza",
+      "Cost": 100
+     },
+     {
+      "Items": "Capsicum Pizza",
+      "Cost": 100
+     },
+     {
+      "Items": "Tomato Pizza",
+      "Cost": 120
+     },
+     {
+      "Items": "Corn+All Vegetable Pizza",
+      "Cost": 160
+     },
+     {
+      "Items": "Chicken Tikka Pizza",
+      "Cost": 160
+     },
+     {
+      "Items": "Chicken Salami Pizza",
+      "Cost": 170
+     },
+     {
+      "Items": "Chicken Seekh Pizza",
+      "Cost": 170
+     },
+     {
+      "Items": "Mutton Seekh Pizza",
+      "Cost": 160
+     },
+     {
+      "Items": "Chicken Popcorn Pizza",
+      "Cost": 180
+     },
+     {
+      "Items": "Chicken Nuggets Pizza",
+      "Cost": 180
+     },
+     {
+      "Items": "Chilli Chicken Pizza",
+      "Cost": 20
+     },
+     {
+      "Items": "Egg Cheese Addition in Any Pizza",
+      "Cost": 100
+     },
+     {
+      "Items": "Chicken Salami Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Chicken Nuggets Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Chilli Chicken Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Chicken Popcorn Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Chicken Manchurian Roll",
+      "Cost": 120
+     },
+     {
+      "Items": "Chicken Bomb Roll 5 Pc.",
+      "Cost": 150
+     },
+     {
+      "Items": "Special Bomb Roll 8 Pc."
+     }
+    ],
+    "surya":[
+     {
+      "Food ": "Aloo Patties",
+      "Cost": "₹30\/-"
+     },
+     {
+      "Food ": "Paneer Patties",
+      "Cost": "₹60\/-"
+     },
+     {
+      "Food ": "Veg Hot Dog",
+      "Cost": "₹70\/-"
+     },
+     {
+      "Food ": "Vegetable Subway",
+      "Cost": "₹80\/-"
+     },
+     {
+      "Food ": "Paneer Subway",
+      "Cost": "₹100\/-"
+     },
+     {
+      "Food ": "Veg Table Wrap",
+      "Cost": "₹70\/-"
+     },
+     {
+      "Food ": "Paneer Wrap",
+      "Cost": "₹100\/-"
+     },
+     {
+      "Food ": "Paneer Kulcha",
+      "Cost": "₹50\/-"
+     },
+     {
+      "Food ": "Samosa",
+      "Cost": "₹15\/-"
+     },
+     {
+      "Food ": "Chola Kulcha",
+      "Cost": "₹50\/-"
+     },
+     {
+      "Food ": "Samosa & Chat",
+      "Cost": "₹40\/-"
+     },
+     {
+      "Food ": "Pav Bhaji",
+      "Cost": "₹60\/-"
+     },
+     {
+      "Food ": "Mushroom Patties",
+      "Cost": "₹40\/-"
+     },
+     {
+      "Food ": "Aloo Cheese Patties",
+      "Cost": "₹45\/-"
+     },
+     {
+      "Food ": "Paneer Cheese Patties",
+      "Cost": "₹50\/-"
+     },
+     {
+      "Food ": "Mushroom Cheese Patties",
+      "Cost": "₹55\/-"
+     },
+     {
+      "Food ": "Bread Omelette",
+      "Cost": "₹50\/-"
+     },
+     {
+      "Food ": "Cheese Omelette",
+      "Cost": "₹50\/-"
+     },
+     {
+      "Food ": "Cheese & Chicken",
+      "Cost": "₹100\/-"
+     },
+     {
+      "Food ": "Omelette",
+      "Cost": "₹100\/-"
+     },
+     {
+      "Food ": "Chicken Burger",
+      "Cost": "₹120\/-"
+     },
+     {
+      "Food ": "Chicken Subway",
+      "Cost": "₹120\/-"
+     },
+     {
+      "Food ": "Chicken Wrap",
+      "Cost": "₹120\/-"
+     }
+    ]
+    }
