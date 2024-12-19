@@ -3,7 +3,7 @@ const data={
      {
       "Item": "Classic margherita",
       "Price": "175\/ 245\/ 445",
-      "Column3": "Pizza"
+  
      },
      {
       "Item": "Tandoori Paneer",
@@ -48,7 +48,6 @@ const data={
      {
       "Item": "Three Cheese Mac & Cheese",
       "Price": "295\/ 345",
-      "Column3": "Pasta"
      },
      {
       "Item": "Panne Arrabiata",
@@ -73,7 +72,6 @@ const data={
      {
       "Item": "French Fries ",
       "Price": 155,
-      "Column3": "Appetieser"
      },
      {
       "Item": "Dirty Fries",
@@ -348,11 +346,7 @@ const data={
       "Item": "Singapore Fried Rice: ",
       "Price": 195
      },
-     null,
-     {
-      "Item": "Desserts:"
-     },
-     null,
+  
      {
       "Item": "Chocolate: ",
       "Price": 245
@@ -361,28 +355,8 @@ const data={
       "Item": "Red Velvet: ",
       "Price": 245
      },
-     null,
-     {
-      "Item": "Add-ons:"
-     },
-     null,
-     {
-      "Item": "Vegetable: ",
-      "Price": 25
-     },
-     {
-      "Item": "Egg: ",
-      "Price": 25
-     },
-     {
-      "Item": "Chicken: ",
-      "Price": 45
-     },
-     {
-      "Item": "Fish: ",
-      "Price": 75
-     },
-     null,
+     
+
      {
       "Item": "Spring Roll (4 pcs)",
       "Price": 175
@@ -434,7 +408,25 @@ const data={
      {
       "Item": "Classic Chicken (Steamed | Kurkure | Saucy | Fried | Pan Fried)",
       "Price": "150 \/ 175 \/ 190 \/ 165 \/ 155"
-     }
+     },{
+        "Item": "Add-ons:"
+       },
+       {
+        "Item": "Vegetable: ",
+        "Price": 25
+       },
+       {
+        "Item": "Egg: ",
+        "Price": 25
+       },
+       {
+        "Item": "Chicken: ",
+        "Price": 45
+       },
+       {
+        "Item": "Fish: ",
+        "Price": 75
+       },
     ],
     "Naveen":[
      {
@@ -589,10 +581,8 @@ const data={
       "Item": "Haldi Milk",
       "Price": "₹25"
      },
-     null,
-     {
-      "Price": "₹25"
-     }
+     
+     
     ],
     "A One Rama":[
      {
@@ -1134,6 +1124,67 @@ const data={
       "Item": "Chicken Wrap",
       "Price": "₹120\/-"
      }
+    ],
+    "Burgrill":[
+      {"Item": "Southern State", "Price": "59"},
+      {"Item": "Spicy Veggie", "Price": ""},
+      {"Item": "Veggie B", "Price": ""},
+      {"Item": "Chilli Cheese", "Price": "99"},
+      {"Item": "Ultimate Snacker Slider", "Price": "109"},
+      {"Item": "Cheesy Cheddar Paneer Slider", "Price": "129"},
+      {"Item": "Chicken Steak", "Price": "79"},
+      {"Item": "Spiced Grilled Chicken", "Price": "89"},
+      {"Item": "Grilled Chicken", "Price": "99"},
+      {"Item": "Chicken Cheese Burger", "Price": "109"},
+      {"Item": "Fried Chicken Slider", "Price": "129"},
+      {"Item": "Classic Mutton Cheese Slider", "Price": "139"},
+      {"Item": "BBQ Pulled Chicken", "Price": "149"},
+      {"Item": "Ultimate Snacker", "Price": ""},
+      {"Item": "Cheesy Cheddar Paneer", "Price": ""},
+      {"Item": "Onion Ring Snacker", "Price": ""},
+      {"Item": "Heavy Weight", "Price": ""},
+      {"Item": "Cheese Chicken Quarter Pounder", "Price": "199"},
+      {"Item": "Tandoori Chicken Breast", "Price": "209"},
+      {"Item": "Cheese Mutton Quarter Pounder", "Price": "239"},
+      {"Item": "Peri - Peri Fried Chicken", "Price": "249"},
+      {"Item": "Onion Rings", "Price": "119"},
+      {"Item": "Smokey Cheese Nads", "Price": "119"},
+      {"Item": "Chicken Wings (3ps|6ps)", "Price": "159/299"},
+      {"Item": "Boneless Chicken Wings (3ps|6ps)", "Price": "159/299"},
+      {"Item": "Salted (Regular/Large)", "Price": "89/99"},
+      {"Item": "Portuguese (Regular/Large)", "Price": "89/109"},
+      {"Item": "Smokey BBQ (Regular/Large)", "Price": "89/109"},
+      {"Item": "African Peri - Peri (Regular/Large)", "Price": "109/129"},
+      {"Item": "Cheesy Fries (Regular/Large)", "Price": "109/129"},
+      {"Item": "Chicken & Cheese (Regular/Large)", "Price": "159/189"},
+      {"Item": "Fully Loaded Chicken (Regular/Large)", "Price": "159/189"},
+      {"Item": "Tandoori Paneer Tikka", "Price": "179"},
+      {"Item": "Falafel", "Price": "179"},
+      {"Item": "Tandoori Chicken", "Price": "219"},
+      {"Item": "BBQ Pulled", "Price": "219"},
+      {"Item": "Chilli Cheese Slider", "Price": "279"},
+      {"Item": "Veggie B Slider", "Price": "279"},
+      {"Item": "Ultimate Snacker Slider", "Price": "279"},
+      {"Item": "Classic Chicken Cheese Slider", "Price": "349"},
+      {"Item": "Classic Mutton Cheese Slider", "Price": "349"},
+      {"Item": "Fried Chicken Slider", "Price": "349"},
+      {"Item": "Peri - Peri Fries Bucket", "Price": "249"},
+      {"Item": "Soggy Loaded Fries Bucket", "Price": "299"},
+      {"Item": "Veg Sides Bucket", "Price": "449"},
+      {"Item": "Chicken Wings Bucket", "Price": "499"},
+      {"Item": "Boneless Chicken Wings Bucket", "Price": "499"},
+      {"Item": "Non-Veg Sides Bucket", "Price": "499"},
+      {"Item": "Kit Kat Shake", "Price": "179"},
+      {"Item": "Cold Coffee", "Price": "179"},
+      {"Item": "Belgian Chocolate Cold Coffee", "Price": "179"},
+      {"Item": "Blueberry Cheesecake Shake", "Price": "179"},
+      {"Item": "Caramel Parle-G Shake", "Price": "179"},
+      {"Item": "Pepsi/Pepsi Black", "Price": "MRP"},
+      {"Item": "Lemon Green Ice Tea", "Price": "MRP"},
+      {"Item": "Peach Black Ice Tea", "Price": "MRP"},
+      {"Item": "Bombay Banta", "Price": "MRP"},
+      {"Item": "Brownie", "Price": "109"}
     ]
+    
     }
     export default data;

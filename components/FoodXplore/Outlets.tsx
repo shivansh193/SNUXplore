@@ -3,12 +3,24 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import data from "../../public/data/foodxplore";
 
-// Menu Modal Component
-const MenuModal = ({ isOpen, onClose, menuData, selectedRestaurant }) => {
+// Add this interface above the MenuModal component
+interface MenuModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  menuData: Record<string, Array<{ 
+    Item: string; 
+    Price?: string | number; 
+  }>>;
+  selectedRestaurant: string;
+}
+
+const MenuModal = ({ isOpen, onClose, menuData, selectedRestaurant }: MenuModalProps) => {
   if (!isOpen) return null;
 
   // Get menu for the selected restaurant
   const selectedMenu = menuData[selectedRestaurant] || [];
+  console.log(selectedRestaurant)
+  console.log(menuData[selectedRestaurant])
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
@@ -56,11 +68,9 @@ const MenuModal = ({ isOpen, onClose, menuData, selectedRestaurant }) => {
   );
 };
 
-
 const FoodExplore = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedRestaurant, setSelectedRestaurant] = useState("");
-  const [restarauntData, setSelectedRestaurantData]=useState([])
 
   const [filters, setFilters] = useState([
     { name: "Top Rated Spots", active: false },
@@ -78,7 +88,7 @@ const FoodExplore = () => {
     { name: "Burgrill", location: "" },
     { name: "Bharityam", location: "" },
     { name: "Koyla Kebab", location: "" },
-    { name: "Surya", location: "" },
+    { name: "surya", location: "" },
   ]);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -93,7 +103,7 @@ const FoodExplore = () => {
     return () => window.removeEventListener("resize", updateItemsPerPage);
   }, []);
 
-  const handlePageChange = (newPage) => {
+  const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
   };
 
@@ -102,9 +112,6 @@ const FoodExplore = () => {
   const totalPages = Math.ceil(places.length / itemsPerPage);
 
   const handleMenuView = (placeName: string) => {
-    console.log(placeName);
-    console.log(data[placeName])
-    setSelectedRestaurantData(data[placeName])
     setSelectedRestaurant(placeName);
     setIsModalOpen(true);
   };
@@ -215,7 +222,7 @@ const FoodExplore = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         menuData={data}
-        restaurantName={selectedRestaurant}
+        selectedRestaurant={selectedRestaurant}
       />
     </div>
   );

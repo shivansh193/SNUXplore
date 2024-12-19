@@ -11,7 +11,6 @@ export default function Home() {
       <HeroSec />
       <QuickLinksPage />
       <Navigation />
-      <Footer />
     </div>
   );
 }
