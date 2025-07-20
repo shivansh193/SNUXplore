@@ -17,6 +17,7 @@ function Navbar() {
                 <Link href="/snugpt" className="sm:px-6 px-2 py-3 sm:bg-transparent bg-snuxplore-nav-medium-gray text-sm sm:text-xs text-gray-300 rounded-lg border border-white/10 hover:bg-snuxplore-nav-dark-gray">SNUGPT</Link>
                 <Link href="/navigation" className="sm:px-6 px-2 py-3 sm:bg-transparent bg-snuxplore-nav-medium-gray text-sm sm:text-xs text-gray-300 rounded-lg border border-white/10 hover:bg-snuxplore-nav-dark-gray">Navigation</Link>
                 <Link href="/about" className="sm:px-6 px-2 py-3 sm:bg-transparent bg-snuxplore-nav-medium-gray text-sm sm:text-xs text-gray-300 rounded-lg border border-white/10 hover:bg-snuxplore-nav-dark-gray">About</Link>
+                <Link href="/roomfinder" className="sm:px-6 px-2 py-3 sm:bg-transparent bg-snuxplore-nav-medium-gray text-sm sm:text-xs text-gray-300 rounded-lg border border-white/10 hover:bg-snuxplore-nav-dark-gray">Room Finder</Link>
                 {/* <a href="/contact" className="sm:px-6 px- py-3 sm:bg-transparent bg-snuxplore-nav-medium-gray text-sm sm:text-xs text-gray-300 rounded-lg border border-white/10 hover:bg-snuxplore-nav-dark-gray">Contact</a> */}
             </div>
         </div>
