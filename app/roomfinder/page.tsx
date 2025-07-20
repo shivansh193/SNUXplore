@@ -14,7 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const baseURL = "https://empty-room-api.onrender.com/";
-const apiKey = process.env.EMPTY_ROOM_API_KEY || "null";
+const apiKey = process.env.NEXT_PUBLIC_ROOM_API_KEY || "null";
 
 function convertTo12HourFormat(time24: string): string {
     const [hourStr, minute] = time24.split(":");
