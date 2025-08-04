@@ -124,7 +124,7 @@ export default function RoomFinder() {
 
                 {/* Check Availability */}
                 <TabsContent value="check">
-                    <Card>
+                    <Card style={{ backgroundColor: '#F0BD1A' }}>
                         <CardHeader>
                             <CardTitle>Check Room Availability</CardTitle>
                         </CardHeader>
@@ -161,7 +161,7 @@ export default function RoomFinder() {
                                 onChange={(e) => setEndTime(e.target.value)}
                             />
 
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm text-black">
                                 Leave &quot;End Time&quot; blank to check at a single time.
                             </p>
                             <Button onClick={handleCheckAvailability}>Check Availability</Button>
@@ -177,7 +177,7 @@ export default function RoomFinder() {
                                                 {data.available ? "Available" : "Occupied"}
                                             </span>
                                         </p>
-                                        <p className="text-gray-500">
+                                        <p className="text-black">
                                             On {data.day} at{" "}
                                             {"interval" in data ? data.interval : data.time}
                                         </p>
@@ -186,7 +186,7 @@ export default function RoomFinder() {
                             )}
 
                             {data && typeof data.available === "string" && (
-                                <div className="mt-4 p-4 rounded-md bg-red-100 text-red-800 text-sm border border-red-300">
+                                <div className="mt-4 p-4 rounded-md bg-white text-red-800 text-sm border border-red-300">
                                     ❌ {data.available}: <strong>{data.roomname}</strong>
                                 </div>
                             )}
@@ -197,7 +197,7 @@ export default function RoomFinder() {
 
                 {/* Room Schedule */}
                 <TabsContent value="schedule">
-                    <Card>
+                    <Card style={{ backgroundColor: '#F0BD1A' }}>
                         <CardHeader>
                             <CardTitle>View Room Schedule for a Day</CardTitle>
                         </CardHeader>
@@ -219,7 +219,7 @@ export default function RoomFinder() {
                             <Button onClick={handleSchedule}>Get Schedule</Button>
                             {schedule && Array.isArray(schedule.Result) && (
                                 <div className="mt-4 overflow-x-auto">
-                                    <p className="text-sm mb-2 text-gray-600">
+                                    <p className="text-sm mb-2 text-black">
                                         Schedule for <strong>{schedule.roomname}</strong> on <strong>{schedule.day}</strong>
                                     </p>
                                     <table className="w-full text-sm border rounded-md overflow-hidden">
@@ -232,7 +232,7 @@ export default function RoomFinder() {
                                         </thead>
                                         <tbody>
                                             {schedule.Result.map((entry: any, idx: number) => (
-                                                <tr key={idx} className="hover:bg-gray-50">
+                                                <tr key={idx} className="bg-white">
                                                     <td className="p-2 border">{entry["Course Code & Component"]}</td>
                                                     <td className="p-2 border">{entry.From}</td>
                                                     <td className="p-2 border">{entry.Until}</td>
@@ -244,7 +244,7 @@ export default function RoomFinder() {
                             )}
 
                             {schedule && typeof schedule.Result === "string" && (
-                                <div className="mt-4 p-4 rounded-md bg-red-100 text-red-800 text-sm border border-red-300">
+                                <div className="mt-4 p-4 rounded-md bg-white text-red-800 text-sm border border-red-300">
                                     ❌ {schedule.Result}: <strong>{schedule.roomname}</strong>
                                 </div>
                             )}
@@ -255,7 +255,7 @@ export default function RoomFinder() {
 
                 {/* Find Free Rooms */}
                 <TabsContent value="search">
-                    <Card>
+                    <Card style={{ backgroundColor: '#F0BD1A' }}>
                         <CardHeader>
                             <CardTitle>Find Free Rooms by Time</CardTitle>
                         </CardHeader>
@@ -287,13 +287,13 @@ export default function RoomFinder() {
                                 onChange={(e) => setEndTime(e.target.value)}
                             />
 
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm text-black">
                                 Leave &quot;End Time&quot; blank to find rooms free at a single time.
                             </p>
                             <Button onClick={handleFindFreeRooms}>Find Free Rooms</Button>
                             {Array.isArray(data?.available) && data.available.length > 0 && (
                                 <div className="mt-4">
-                                    <p className="text-sm mb-2 text-gray-600">
+                                    <p className="text-sm mb-2 text-black">
                                         Rooms available on <strong>{data.day}</strong>{" "}
                                         {data.interval ? `(${data.interval})` : `at ${data.time}`}
                                     </p>
@@ -301,8 +301,8 @@ export default function RoomFinder() {
                                         {data.available.map((room: string, idx: number) => (
                                             <div
                                                 key={idx}
-                                                className="px-3 py-2 border rounded bg-green-50 text-green-800 text-sm text-center shadow-sm"
-                                            >
+                                                className="px-3 py-2 border rounded text-sm text-center shadow-sm"
+                                                style={{ backgroundColor: '#ffffffff', color: 'black' }}                                            >
                                                 {room}
                                             </div>
                                         ))}
@@ -317,7 +317,7 @@ export default function RoomFinder() {
                             )}
 
                             {typeof data?.available === "string" && (
-                                <div className="mt-4 p-4 rounded-md bg-red-100 text-red-800 text-sm border border-red-300">
+                                <div className="mt-4 p-4 rounded-md bg-white text-red-800 text-sm border border-red-300">
                                     ❌ {data.available}: <strong>{data.roomname}</strong>
                                 </div>
                             )}
