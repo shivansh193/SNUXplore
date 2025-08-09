@@ -3,9 +3,9 @@ import Link from "next/link";
 const Navigation = () => {
     const navItems = [
         { text: "NAVIGATION", href:'/navigation', color: "yellow", enabled: true },
-        { text: "FOODXPLORE", href:'/food', color: "yellow", isNew: true, enabled: false },
+        { text: "FOODXPLORE", href:'/food', color: "yellow", isNew: true, enabled: true },
         { text: "HEALTH-KIT", href:'/health', color: "yellow", enabled: false },
-        { text: "ADMIN INFO", href:'/admin', color: "yellow", enabled: false },
+        { text: "ROOM FINDER", href:'/roomfinder', color: "yellow", enabled: true },
         { text: "SNU-GPT", href: '/gpt', color: "yellow", enabled: true }
     ];
 

@@ -1,28 +1,29 @@
+// components/RoomFinder.jsx (or wherever you have this component)
+
 "use client";
 
+import { useState, useEffect } from "react";
+
+// --- Helper Functions (No changes needed here) ---
 function getCurrentISTTime(): string {
     const now = new Date();
-    const istOffset = 5.5 * 60 * 60 * 1000; // IST offset in milliseconds
+    // In a client component, we should get the time on mount to avoid server-client mismatch
+    const istOffset = 5.5 * 60 * 60 * 1000;
     const istTime = new Date(now.getTime() + istOffset);
     return istTime.toISOString().slice(11, 16); // "HH:MM"
 }
 
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-const baseURL = "https://empty-room-api.onrender.com/";
-const apiKey = process.env.NEXT_PUBLIC_EMPTY_ROOM_API_KEY || "null";
-
 function convertTo12HourFormat(time24: string): string {
+    if (!time24) return "";
     const [hourStr, minute] = time24.split(":");
     let hour = parseInt(hourStr, 10);
     const ampm = hour >= 12 ? "PM" : "AM";
     hour = hour % 12 || 12;
     return `${hour.toString().padStart(2, "0")}:${minute} ${ampm}`;
 }
+
+const baseURL = "https://empty-room-api.onrender.com/";
+const apiKey = process.env.NEXT_PUBLIC_EMPTY_ROOM_API_KEY || "null";
 
 async function fetchFromAPI(path: string, params: Record<string, string>) {
     const query = new URLSearchParams({ ...params, "no-delay-key": apiKey }).toString();
@@ -40,291 +41,189 @@ async function fetchFromAPI(path: string, params: Record<string, string>) {
     return res.json();
 }
 
+// --- Main Component (Re-styled) ---
 export default function RoomFinder() {
+    // --- State Management (No changes needed here) ---
     const [room, setRoom] = useState("");
     const [day, setDay] = useState("Mon");
-    const [startTime, setStartTime] = useState(getCurrentISTTime());
-    const [endTime, setEndTime] = useState(""); // Optional
+    const [startTime, setStartTime] = useState("");
+    const [endTime, setEndTime] = useState("");
     const [data, setData] = useState<any>(null);
     const [schedule, setSchedule] = useState<any>(null);
     const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState(false);
+    const [activeTab, setActiveTab] = useState("check");
 
-    async function handleCheckAvailability() {
+    // Set initial time on client mount to prevent hydration errors
+    useEffect(() => {
+        setStartTime(getCurrentISTTime());
+    }, []);
+
+    // --- API Handlers (No changes needed here, just added loading state) ---
+    const handleAPICall = async (apiCall: () => Promise<void>) => {
+        setLoading(true);
+        setError(null);
+        setData(null);
+        setSchedule(null);
         try {
-            setError(null);
-            setData(null);
-            const formattedStart = convertTo12HourFormat(startTime);
-            const formattedEnd = endTime ? convertTo12HourFormat(endTime) : null;
-
-            const res = formattedEnd
-                ? await fetchFromAPI("check-interval", {
-                    roomname: room,
-                    day: day,
-                    starttime: formattedStart,
-                    endtime: formattedEnd,
-                })
-                : await fetchFromAPI("check-instant", {
-                    roomname: room,
-                    day: day,
-                    time: formattedStart,
-                });
-
-            setData(res);
+            await apiCall();
         } catch (err: any) {
-            setError(err.message || "Failed to fetch availability.");
+            setError(err.message || "An unexpected error occurred.");
+        } finally {
+            setLoading(false);
         }
-    }
+    };
+    
+    const handleCheckAvailability = () => handleAPICall(async () => {
+        const formattedStart = convertTo12HourFormat(startTime);
+        const formattedEnd = endTime ? convertTo12HourFormat(endTime) : null;
+        const res = formattedEnd
+            ? await fetchFromAPI("check-interval", { roomname: room, day, starttime: formattedStart, endtime: formattedEnd })
+            : await fetchFromAPI("check-instant", { roomname: room, day, time: formattedStart });
+        setData(res);
+    });
 
-    async function handleSchedule() {
-        try {
-            setError(null);
-            setSchedule(null);
-            const res = await fetchFromAPI("room-day-sched", {
-                roomname: room,
-                day: day,
-            });
-            setSchedule(res);
-        } catch (err: any) {
-            setError(err.message || "Failed to fetch schedule.");
-        }
-    }
+    const handleSchedule = () => handleAPICall(async () => {
+        const res = await fetchFromAPI("room-day-sched", { roomname: room, day });
+        setSchedule(res);
+    });
 
-    async function handleFindFreeRooms() {
-        try {
-            setError(null);
-            setData(null);
-            const formattedStart = convertTo12HourFormat(startTime);
-            const formattedEnd = endTime ? convertTo12HourFormat(endTime) : null;
+    const handleFindFreeRooms = () => handleAPICall(async () => {
+        const formattedStart = convertTo12HourFormat(startTime);
+        const formattedEnd = endTime ? convertTo12HourFormat(endTime) : null;
+        const res = formattedEnd
+            ? await fetchFromAPI("list-interval", { day, starttime: formattedStart, endtime: formattedEnd })
+            : await fetchFromAPI("list-instant", { day, time: formattedStart });
+        setData(res);
+    });
 
-            const res = formattedEnd
-                ? await fetchFromAPI("list-interval", {
-                    day: day,
-                    starttime: formattedStart,
-                    endtime: formattedEnd,
-                })
-                : await fetchFromAPI("list-instant", {
-                    day: day,
-                    time: formattedStart,
-                });
-
-            setData(res);
-        } catch (err: any) {
-            setError(err.message || "Failed to find free rooms.");
-        }
-    }
+    // --- Re-styled Form Elements for the new theme ---
+    const ThemedInput = (props: React.InputHTMLAttributes<HTMLInputElement>) => (
+        <input {...props} className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all" />
+    );
+    const ThemedSelect = (props: React.SelectHTMLAttributes<HTMLSelectElement>) => (
+        <select {...props} className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all appearance-none bg-no-repeat bg-right-4" style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundSize: '1.5em 1.5em' }} />
+    );
+    const ThemedButton = ({ children, onClick }: { children: React.ReactNode, onClick: () => void }) => (
+        <button onClick={onClick} disabled={loading} className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-3 rounded-lg mt-4 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
+            {loading ? 'Searching...' : children}
+        </button>
+    );
 
     return (
-        <div className="max-w-2xl mx-auto p-4">
-            <Tabs defaultValue="check" className="w-full">
-                <TabsList className="grid w-full grid-cols-3">
-                    <TabsTrigger value="schedule">Room Schedule</TabsTrigger>
-                    <TabsTrigger value="check">Check Availability</TabsTrigger>
-                    <TabsTrigger value="search">Find Free Rooms</TabsTrigger>
-                </TabsList>
+        <div className="bg-[#1C1C1C] min-h-screen text-white pt-16 pb-24">
+            <div className="text-center mb-12">
+                <h1 className="text-5xl md:text-6xl font-extrabold">
+                    <span className="text-yellow-400">Room </span>
+                    <span className="text-orange-500">Finder</span>
+                </h1>
+                <p className="text-gray-400 mt-3">Find empty classrooms on campus effortlessly.</p>
+            </div>
 
-                {/* Check Availability */}
-                <TabsContent value="check">
-                    <Card style={{ backgroundColor: '#F0BD1A' }}>
-                        <CardHeader>
-                            <CardTitle>Check Room Availability</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-2">
-                            <Input
-                                placeholder="Room Name (e.g. D217)"
-                                value={room}
-                                onChange={(e) => setRoom(e.target.value.toUpperCase())}
-                            />
-                            <select
-                                value={day}
-                                onChange={(e) => setDay(e.target.value)}
-                                className="w-full border rounded-md px-3 py-2"
-                            >
-                                {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => (
-                                    <option key={d} value={d}>{d}</option>
-                                ))}
-                            </select>
+            <div className="max-w-2xl mx-auto px-4">
+                {/* --- Themed Tabs --- */}
+                <div className="flex justify-center gap-2 md:gap-4 mb-8">
+                    {[{id: 'schedule', label: 'Room Schedule'}, {id: 'check', label: 'Check Room'}, {id: 'search', label: 'Find Free'}].map(tab => (
+                        <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${activeTab === tab.id ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}>
+                            {tab.label}
+                        </button>
+                    ))}
+                </div>
 
-                            <label className="block text-sm font-medium">Start Time*</label>
-                            <input
-                                type="time"
-                                className="w-full border rounded-md px-3 py-2"
-                                value={startTime}
-                                onChange={(e) => setStartTime(e.target.value)}
-                                required
-                            />
+                {/* --- Tab Content --- */}
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                    {/* Check Availability */}
+                    {activeTab === 'check' && (
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-white mb-2">Check Room Availability</h2>
+                            <ThemedInput placeholder="Room Name (e.g. D217)" value={room} onChange={(e) => setRoom(e.target.value.toUpperCase())} />
+                            <ThemedSelect value={day} onChange={(e) => setDay(e.target.value)}>
+                                {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => <option key={d} value={d}>{d}</option>)}
+                            </ThemedSelect>
+                            <div><label className="text-sm text-gray-400">Start Time*</label><ThemedInput type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} required /></div>
+                            <div><label className="text-sm text-gray-400">End Time (optional)</label><ThemedInput type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} /></div>
+                            <ThemedButton onClick={handleCheckAvailability}>Check Now</ThemedButton>
+                        </div>
+                    )}
 
-                            <label className="block text-sm font-medium mt-2">End Time (optional)</label>
-                            <input
-                                type="time"
-                                className="w-full border rounded-md px-3 py-2"
-                                value={endTime}
-                                onChange={(e) => setEndTime(e.target.value)}
-                            />
+                    {/* Room Schedule */}
+                    {activeTab === 'schedule' && (
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-white mb-2">View Room Schedule</h2>
+                            <ThemedInput placeholder="Room Name (e.g. D217)" value={room} onChange={(e) => setRoom(e.target.value.toUpperCase())} />
+                            <ThemedSelect value={day} onChange={(e) => setDay(e.target.value)}>
+                                {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => <option key={d} value={d}>{d}</option>)}
+                            </ThemedSelect>
+                            <ThemedButton onClick={handleSchedule}>Get Schedule</ThemedButton>
+                        </div>
+                    )}
+                    
+                    {/* Find Free Rooms */}
+                    {activeTab === 'search' && (
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-white mb-2">Find Free Rooms</h2>
+                            <ThemedSelect value={day} onChange={(e) => setDay(e.target.value)}>
+                                {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => <option key={d} value={d}>{d}</option>)}
+                            </ThemedSelect>
+                            <div><label className="text-sm text-gray-400">Start Time*</label><ThemedInput type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} required /></div>
+                            <div><label className="text-sm text-gray-400">End Time (optional)</label><ThemedInput type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} /></div>
+                            <ThemedButton onClick={handleFindFreeRooms}>Find Free Rooms</ThemedButton>
+                        </div>
+                    )}
+                </div>
 
-                            <p className="text-sm text-black">
-                                Leave &quot;End Time&quot; blank to check at a single time.
-                            </p>
-                            <Button onClick={handleCheckAvailability}>Check Availability</Button>
-                            {data && typeof data.available === "boolean" && (
-                                <div className="mt-4 p-4 rounded-md border flex items-center gap-4 bg-gray-50">
-                                    <div className={`text-2xl ${data.available ? "text-green-600" : "text-red-600"}`}>
-                                        {data.available ? "✔️" : "❌"}
-                                    </div>
-                                    <div className="text-sm">
-                                        <p className="font-medium">
-                                            Room <span className="font-bold">{data.roomname}</span> is{" "}
-                                            <span className={data.available ? "text-green-600" : "text-red-600"}>
-                                                {data.available ? "Available" : "Occupied"}
-                                            </span>
-                                        </p>
-                                        <p className="text-black">
-                                            On {data.day} at{" "}
-                                            {"interval" in data ? data.interval : data.time}
-                                        </p>
-                                    </div>
+                {/* --- Results Display Area --- */}
+                <div className="mt-6 min-h-[100px]">
+                    {error && <p className="text-red-400 text-center p-4 bg-red-900/50 rounded-lg">{error}</p>}
+                    
+                    {/* Availability Result */}
+                    {data && typeof data.available === "boolean" && (
+                        <div className={`p-4 rounded-lg flex items-center gap-4 ${data.available ? 'bg-green-900/50' : 'bg-red-900/50'}`}>
+                            <div className="text-3xl">{data.available ? "✔️" : "❌"}</div>
+                            <div>
+                                <p className="font-bold text-lg">Room {data.roomname} is <span className={data.available ? 'text-green-300' : 'text-red-300'}>{data.available ? "Available" : "Occupied"}</span></p>
+                                <p className="text-gray-300">On {data.day} at {"interval" in data ? data.interval : data.time}</p>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Schedule Result */}
+                    {schedule && Array.isArray(schedule.Result) && (
+                        <div className="bg-gray-800/50 rounded-lg p-4">
+                            <h3 className="font-bold mb-3">Schedule for {schedule.roomname} on {schedule.day}</h3>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-sm text-left">
+                                    <thead className="border-b border-gray-600"><tr className="text-gray-300">
+                                        <th className="p-2">Course</th><th className="p-2">From</th><th className="p-2">Until</th>
+                                    </tr></thead>
+                                    <tbody>{schedule.Result.map((entry: any, idx: number) => (
+                                        <tr key={idx} className="border-b border-gray-700 last:border-none">
+                                            <td className="p-2">{entry["Course Code & Component"]}</td>
+                                            <td className="p-2">{entry.From}</td><td className="p-2">{entry.Until}</td>
+                                        </tr>
+                                    ))}</tbody>
+                                </table>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Free Rooms Result */}
+                    {Array.isArray(data?.available) && (
+                        <div className="bg-gray-800/50 rounded-lg p-4">
+                             <h3 className="font-bold mb-3">Rooms available on {data.day} {data.interval ? `from ${data.interval}` : `at ${data.time}`}</h3>
+                             {data.available.length > 0 ? (
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                                    {data.available.map((room: string, idx: number) => (
+                                        <div key={idx} className="bg-gray-700 text-center rounded-md py-2 px-1 font-mono shadow-sm">{room}</div>
+                                    ))}
                                 </div>
-                            )}
-
-                            {data && typeof data.available === "string" && (
-                                <div className="mt-4 p-4 rounded-md bg-white text-red-800 text-sm border border-red-300">
-                                    ❌ {data.available}: <strong>{data.roomname}</strong>
-                                </div>
-                            )}
-                            {error && <p className="text-red-500 text-sm">{error}</p>}
-                        </CardContent>
-                    </Card>
-                </TabsContent>
-
-                {/* Room Schedule */}
-                <TabsContent value="schedule">
-                    <Card style={{ backgroundColor: '#F0BD1A' }}>
-                        <CardHeader>
-                            <CardTitle>View Room Schedule for a Day</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-2">
-                            <Input
-                                placeholder="Room Name (e.g. D217)"
-                                value={room}
-                                onChange={(e) => setRoom(e.target.value.toUpperCase())}
-                            />
-                            <select
-                                value={day}
-                                onChange={(e) => setDay(e.target.value)}
-                                className="w-full border rounded-md px-3 py-2"
-                            >
-                                {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => (
-                                    <option key={d} value={d}>{d}</option>
-                                ))}
-                            </select>
-                            <Button onClick={handleSchedule}>Get Schedule</Button>
-                            {schedule && Array.isArray(schedule.Result) && (
-                                <div className="mt-4 overflow-x-auto">
-                                    <p className="text-sm mb-2 text-black">
-                                        Schedule for <strong>{schedule.roomname}</strong> on <strong>{schedule.day}</strong>
-                                    </p>
-                                    <table className="w-full text-sm border rounded-md overflow-hidden">
-                                        <thead className="bg-muted text-left">
-                                            <tr>
-                                                <th className="p-2 border">Course</th>
-                                                <th className="p-2 border">From</th>
-                                                <th className="p-2 border">Until</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {schedule.Result.map((entry: any, idx: number) => (
-                                                <tr key={idx} className="bg-white">
-                                                    <td className="p-2 border">{entry["Course Code & Component"]}</td>
-                                                    <td className="p-2 border">{entry.From}</td>
-                                                    <td className="p-2 border">{entry.Until}</td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            )}
-
-                            {schedule && typeof schedule.Result === "string" && (
-                                <div className="mt-4 p-4 rounded-md bg-white text-red-800 text-sm border border-red-300">
-                                    ❌ {schedule.Result}: <strong>{schedule.roomname}</strong>
-                                </div>
-                            )}
-                            {error && <p className="text-red-500 text-sm">{error}</p>}
-                        </CardContent>
-                    </Card>
-                </TabsContent>
-
-                {/* Find Free Rooms */}
-                <TabsContent value="search">
-                    <Card style={{ backgroundColor: '#F0BD1A' }}>
-                        <CardHeader>
-                            <CardTitle>Find Free Rooms by Time</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-2">
-                            <select
-                                value={day}
-                                onChange={(e) => setDay(e.target.value)}
-                                className="w-full border rounded-md px-3 py-2"
-                            >
-                                {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => (
-                                    <option key={d} value={d}>{d}</option>
-                                ))}
-                            </select>
-
-                            <label className="block text-sm font-medium">Start Time*</label>
-                            <input
-                                type="time"
-                                className="w-full border rounded-md px-3 py-2"
-                                value={startTime}
-                                onChange={(e) => setStartTime(e.target.value)}
-                                required
-                            />
-
-                            <label className="block text-sm font-medium mt-2">End Time (optional)</label>
-                            <input
-                                type="time"
-                                className="w-full border rounded-md px-3 py-2"
-                                value={endTime}
-                                onChange={(e) => setEndTime(e.target.value)}
-                            />
-
-                            <p className="text-sm text-black">
-                                Leave &quot;End Time&quot; blank to find rooms free at a single time.
-                            </p>
-                            <Button onClick={handleFindFreeRooms}>Find Free Rooms</Button>
-                            {Array.isArray(data?.available) && data.available.length > 0 && (
-                                <div className="mt-4">
-                                    <p className="text-sm mb-2 text-black">
-                                        Rooms available on <strong>{data.day}</strong>{" "}
-                                        {data.interval ? `(${data.interval})` : `at ${data.time}`}
-                                    </p>
-                                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                                        {data.available.map((room: string, idx: number) => (
-                                            <div
-                                                key={idx}
-                                                className="px-3 py-2 border rounded text-sm text-center shadow-sm"
-                                                style={{ backgroundColor: '#ffffffff', color: 'black' }}                                            >
-                                                {room}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-
-                            {Array.isArray(data?.available) && data.available.length === 0 && (
-                                <div className="mt-4 p-4 rounded-md bg-yellow-100 text-yellow-800 text-sm border border-yellow-300">
-                                    ⚠️ No rooms available for the selected slot.
-                                </div>
-                            )}
-
-                            {typeof data?.available === "string" && (
-                                <div className="mt-4 p-4 rounded-md bg-white text-red-800 text-sm border border-red-300">
-                                    ❌ {data.available}: <strong>{data.roomname}</strong>
-                                </div>
-                            )}
-                        </CardContent>
-                    </Card>
-                </TabsContent>
-            </Tabs>
+                             ) : (
+                                <p className="text-yellow-300 text-center p-4 bg-yellow-900/50 rounded-lg">No rooms available for the selected slot.</p>
+                             )}
+                        </div>
+                    )}
+                </div>
+            </div>
         </div>
     );
 }
